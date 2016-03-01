@@ -1,0 +1,458 @@
+[
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "GDP": 249.5737098,
+    "Year": 1978
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "GDP": 278.3906252,
+    "Year": 1979
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "GDP": 275.6498281,
+    "Year": 1980
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "GDP": 267.6624236,
+    "Year": 1981
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "GDP": 119.8990371,
+    "Year": 2001
+  },
+  {
+    "Code": 268,
+    "Country": "Georgia",
+    "GDP": 1314.67067,
+    "Year": 1991
+  },
+  {
+    "Code": 268,
+    "Country": "Georgia",
+    "GDP": 757.2235485,
+    "Year": 1992
+  },
+  {
+    "Code": 268,
+    "Country": "Georgia",
+    "GDP": 550.0155426,
+    "Year": 1993
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "GDP": 293.4741494,
+    "Year": 1976
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "GDP": 352.4278737,
+    "Year": 1977
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "GDP": 386.0080813,
+    "Year": 1978
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "GDP": 382.6537655,
+    "Year": 1979
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "GDP": 528.9376395,
+    "Year": 1980
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "GDP": 612.49562,
+    "Year": 1981
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "GDP": 613.0182695,
+    "Year": 1982
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "GDP": 540.1598074,
+    "Year": 1983
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "GDP": 542.3052366,
+    "Year": 1984
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "GDP": 529.2873919,
+    "Year": 1985
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "GDP": 475.4138595,
+    "Year": 1986
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "GDP": 442.1481221,
+    "Year": 1987
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "GDP": 507.3551831,
+    "Year": 1988
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "GDP": 569.2271706,
+    "Year": 1989
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "GDP": 630.6685568,
+    "Year": 1990
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "GDP": 694.2457566,
+    "Year": 1991
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "GDP": 740.9177479,
+    "Year": 1992
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "GDP": 253.1931946,
+    "Year": 1993
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "GDP": 269.567076,
+    "Year": 1994
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "GDP": 321.7746398,
+    "Year": 1995
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "GDP": 318.1495354,
+    "Year": 1996
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "GDP": 303.6859047,
+    "Year": 1997
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "GDP": 102.3045029,
+    "Year": 1970
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "GDP": 135.3166668,
+    "Year": 1971
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "GDP": 68.9589809,
+    "Year": 1972
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "GDP": 93.99376256,
+    "Year": 1973
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "GDP": 77.82019898,
+    "Year": 1974
+  },
+  {
+    "Code": 144,
+    "Country": "Sri Lanka",
+    "GDP": 408.1211213,
+    "Year": 1987
+  },
+  {
+    "Code": 144,
+    "Country": "Sri Lanka",
+    "GDP": 420.409156,
+    "Year": 1988
+  },
+  {
+    "Code": 144,
+    "Country": "Sri Lanka",
+    "GDP": 415.2907984,
+    "Year": 1989
+  },
+  {
+    "Code": 144,
+    "Country": "Sri Lanka",
+    "GDP": 472.0864633,
+    "Year": 1990
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "GDP": 206.4409708,
+    "Year": 1996
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "GDP": 219.6310635,
+    "Year": 1997
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "GDP": 212.3742546,
+    "Year": 1998
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "GDP": 215.8966735,
+    "Year": 1999
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "GDP": 231.4329676,
+    "Year": 2000
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "GDP": 248.8329359,
+    "Year": 2001
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "GDP": 246.8035835,
+    "Year": 2002
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "GDP": 254.5539382,
+    "Year": 2003
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "GDP": 288.6695954,
+    "Year": 2004
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "GDP": 318.7480983,
+    "Year": 2005
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "GDP": 350.608465,
+    "Year": 2006
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "GDP": 137.9180311,
+    "Year": 1965
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "GDP": 161.0056786,
+    "Year": 1966
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "GDP": 166.9245655,
+    "Year": 1967
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "GDP": 174.7871299,
+    "Year": 1968
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "GDP": 186.8806592,
+    "Year": 1969
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "GDP": 192.1256596,
+    "Year": 1970
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "GDP": 194.2582535,
+    "Year": 1971
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "GDP": 209.3562328,
+    "Year": 1972
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "GDP": 269.8519129,
+    "Year": 1973
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "GDP": 332.117105,
+    "Year": 1974
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "GDP": 351.5480432,
+    "Year": 1975
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "GDP": 391.4829096,
+    "Year": 1976
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "GDP": 445.3194619,
+    "Year": 1977
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "GDP": 528.5061204,
+    "Year": 1978
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "GDP": 589.749796,
+    "Year": 1979
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "GDP": 682.7749836,
+    "Year": 1980
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "GDP": 720.8994131,
+    "Year": 1981
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "GDP": 742.7043325,
+    "Year": 1982
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "GDP": 797.9338368,
+    "Year": 1983
+  },
+  {
+    "Code": 762,
+    "Country": "Tajikistan",
+    "GDP": 345.6771837,
+    "Year": 1992
+  },
+  {
+    "Code": 762,
+    "Country": "Tajikistan",
+    "GDP": 293.1731154,
+    "Year": 1993
+  },
+  {
+    "Code": 762,
+    "Country": "Tajikistan",
+    "GDP": 236.0452889,
+    "Year": 1994
+  },
+  {
+    "Code": 762,
+    "Country": "Tajikistan",
+    "GDP": 212.9067853,
+    "Year": 1995
+  },
+  {
+    "Code": 762,
+    "Country": "Tajikistan",
+    "GDP": 178.0711659,
+    "Year": 1996
+  },
+  {
+    "Code": 762,
+    "Country": "Tajikistan",
+    "GDP": 155.2766173,
+    "Year": 1997
+  },
+  {
+    "Code": 762,
+    "Country": "Tajikistan",
+    "GDP": 219.5706981,
+    "Year": 1998
+  }
+]

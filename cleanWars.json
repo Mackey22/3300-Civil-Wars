@@ -1,0 +1,1106 @@
+[
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 2,
+    "Year": 1990
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 2,
+    "Year": 1991
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 2,
+    "Year": 1992
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 2,
+    "Year": 1993
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 2,
+    "Year": 1994
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 2,
+    "Year": 1995
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 2,
+    "Year": 1996
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 2,
+    "Year": 1997
+  },
+  {
+    "Code": 268,
+    "Country": "Georgia",
+    "Intensity": 1,
+    "Year": 1991
+  },
+  {
+    "Code": 268,
+    "Country": "Georgia",
+    "Intensity": 1,
+    "Year": 1992
+  },
+  {
+    "Code": 268,
+    "Country": "Georgia",
+    "Intensity": 1,
+    "Year": 1993
+  },
+  {
+    "Code": 418,
+    "Country": "Laos",
+    "Intensity": 3,
+    "Year": 1960
+  },
+  {
+    "Code": 418,
+    "Country": "Laos",
+    "Intensity": 3,
+    "Year": 1961
+  },
+  {
+    "Code": 418,
+    "Country": "Laos",
+    "Intensity": 3,
+    "Year": 1962
+  },
+  {
+    "Code": 418,
+    "Country": "Laos",
+    "Intensity": 3,
+    "Year": 1963
+  },
+  {
+    "Code": 418,
+    "Country": "Laos",
+    "Intensity": 3,
+    "Year": 1964
+  },
+  {
+    "Code": 418,
+    "Country": "Laos",
+    "Intensity": 3,
+    "Year": 1965
+  },
+  {
+    "Code": 418,
+    "Country": "Laos",
+    "Intensity": 3,
+    "Year": 1966
+  },
+  {
+    "Code": 418,
+    "Country": "Laos",
+    "Intensity": 3,
+    "Year": 1967
+  },
+  {
+    "Code": 418,
+    "Country": "Laos",
+    "Intensity": 3,
+    "Year": 1968
+  },
+  {
+    "Code": 418,
+    "Country": "Laos",
+    "Intensity": 3,
+    "Year": 1969
+  },
+  {
+    "Code": 418,
+    "Country": "Laos",
+    "Intensity": 3,
+    "Year": 1970
+  },
+  {
+    "Code": 418,
+    "Country": "Laos",
+    "Intensity": 3,
+    "Year": 1971
+  },
+  {
+    "Code": 418,
+    "Country": "Laos",
+    "Intensity": 3,
+    "Year": 1972
+  },
+  {
+    "Code": 418,
+    "Country": "Laos",
+    "Intensity": 3,
+    "Year": 1973
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "Intensity": 2,
+    "Year": 1996
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "Intensity": 2,
+    "Year": 1997
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "Intensity": 2,
+    "Year": 1998
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "Intensity": 2,
+    "Year": 1999
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "Intensity": 2,
+    "Year": 2000
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "Intensity": 2,
+    "Year": 2001
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "Intensity": 2,
+    "Year": 2002
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "Intensity": 2,
+    "Year": 2003
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "Intensity": 2,
+    "Year": 2004
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "Intensity": 2,
+    "Year": 2005
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "Intensity": 2,
+    "Year": 2006
+  },
+  {
+    "Code": 760,
+    "Country": "Syria",
+    "Intensity": 3,
+    "Year": 1979
+  },
+  {
+    "Code": 760,
+    "Country": "Syria",
+    "Intensity": 3,
+    "Year": 1980
+  },
+  {
+    "Code": 760,
+    "Country": "Syria",
+    "Intensity": 3,
+    "Year": 1981
+  },
+  {
+    "Code": 760,
+    "Country": "Syria",
+    "Intensity": 3,
+    "Year": 1982
+  },
+  {
+    "Code": 762,
+    "Country": "Tajikistan",
+    "Intensity": 3,
+    "Year": 1992
+  },
+  {
+    "Code": 762,
+    "Country": "Tajikistan",
+    "Intensity": 3,
+    "Year": 1993
+  },
+  {
+    "Code": 762,
+    "Country": "Tajikistan",
+    "Intensity": 3,
+    "Year": 1994
+  },
+  {
+    "Code": 762,
+    "Country": "Tajikistan",
+    "Intensity": 3,
+    "Year": 1995
+  },
+  {
+    "Code": 762,
+    "Country": "Tajikistan",
+    "Intensity": 3,
+    "Year": 1996
+  },
+  {
+    "Code": 762,
+    "Country": "Tajikistan",
+    "Intensity": 3,
+    "Year": 1997
+  },
+  {
+    "Code": 762,
+    "Country": "Tajikistan",
+    "Intensity": 3,
+    "Year": 1998
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "Year": 1965
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "Year": 1966
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "Year": 1967
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "Year": 1968
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "Year": 1969
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "Year": 1970
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "Year": 1971
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "Year": 1972
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "Year": 1973
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "Year": 1974
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "Year": 1975
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "Year": 1976
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "Year": 1977
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "Year": 1978
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "Year": 1979
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "Year": 1980
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "Year": 1981
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "Year": 1982
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "Year": 1983
+  },
+  {
+    "Code": 887,
+    "Country": "Yemen, South",
+    "Intensity": 2,
+    "Year": 1986
+  },
+  {
+    "Code": 887,
+    "Country": "Yemen, South",
+    "Intensity": 2,
+    "Year": 1987
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "Year": 1978
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "Year": 1979
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "Year": 1980
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "Year": 1981
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "Year": 1982
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "Year": 1983
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "Year": 1984
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "Year": 1985
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "Year": 1986
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "Year": 1987
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "Year": 1988
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "Year": 1989
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "Year": 1990
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "Year": 1991
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "Year": 1992
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "Year": 1993
+  },
+  {
+    "Code": 144,
+    "Country": "Sri Lanka",
+    "Intensity": 4,
+    "Year": 1987
+  },
+  {
+    "Code": 144,
+    "Country": "Sri Lanka",
+    "Intensity": 4,
+    "Year": 1988
+  },
+  {
+    "Code": 144,
+    "Country": "Sri Lanka",
+    "Intensity": 4,
+    "Year": 1989
+  },
+  {
+    "Code": 144,
+    "Country": "Sri Lanka",
+    "Intensity": 4,
+    "Year": 1990
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 5,
+    "Year": 1970
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 5,
+    "Year": 1971
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 5,
+    "Year": 1972
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 5,
+    "Year": 1973
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 5,
+    "Year": 1974
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "Year": 1965
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "Year": 1966
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "Year": 1976
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "Year": 1977
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "Year": 1978
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "Year": 1979
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "Year": 1980
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "Year": 1981
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "Year": 1982
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "Year": 1983
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "Year": 1984
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "Year": 1985
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "Year": 1986
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "Year": 1987
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "Year": 1988
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "Year": 1989
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "Year": 1990
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "Year": 1991
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "Year": 1992
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 6,
+    "Year": 1975
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 6,
+    "Year": 1976
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 6,
+    "Year": 1977
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 6,
+    "Year": 1978
+  },
+  {
+    "Code": 408,
+    "Country": "Korea North",
+    "Intensity": 6,
+    "Year": 1950
+  },
+  {
+    "Code": 408,
+    "Country": "Korea North",
+    "Intensity": 6,
+    "Year": 1951
+  },
+  {
+    "Code": 408,
+    "Country": "Korea North",
+    "Intensity": 6,
+    "Year": 1952
+  },
+  {
+    "Code": 408,
+    "Country": "Korea North",
+    "Intensity": 6,
+    "Year": 1953
+  },
+  {
+    "Code": 410,
+    "Country": "Korea South",
+    "Intensity": 6,
+    "Year": 1950
+  },
+  {
+    "Code": 410,
+    "Country": "Korea South",
+    "Intensity": 6,
+    "Year": 1951
+  },
+  {
+    "Code": 410,
+    "Country": "Korea South",
+    "Intensity": 6,
+    "Year": 1952
+  },
+  {
+    "Code": 410,
+    "Country": "Korea South",
+    "Intensity": 6,
+    "Year": 1953
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "Year": 1978
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "Year": 1979
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "Year": 1980
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "Year": 1981
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "Year": 1982
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "Year": 1983
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "Year": 1984
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "Year": 1985
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "Year": 1986
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "Year": 1987
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "Year": 1988
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "Year": 1989
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "Year": 1990
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "Year": 1991
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "Year": 1992
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "Year": 1993
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "Year": 1994
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "Year": 1995
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "Year": 1996
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "Year": 1997
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "Year": 1998
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "Year": 1999
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "Year": 2000
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "Year": 2001
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "Year": 1958
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "Year": 1959
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "Year": 1960
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "Year": 1961
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "Year": 1962
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "Year": 1963
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "Year": 1964
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "Year": 1965
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "Year": 1966
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "Year": 1967
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "Year": 1968
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "Year": 1969
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "Year": 1970
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "Year": 1971
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "Year": 1972
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "Year": 1973
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "Year": 1974
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "Year": 1975
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "Year": 1958
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "Year": 1959
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "Year": 1960
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "Year": 1961
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "Year": 1962
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "Year": 1963
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "Year": 1964
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "Year": 1965
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "Year": 1966
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "Year": 1967
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "Year": 1968
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "Year": 1969
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "Year": 1970
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "Year": 1971
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "Year": 1972
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "Year": 1973
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "Year": 1974
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "Year": 1975
+  }
+]
