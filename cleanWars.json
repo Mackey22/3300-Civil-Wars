@@ -2,6 +2,60 @@
   {
     "Code": 116,
     "Country": "Cambodia",
+    "Intensity": 5,
+    "Year": 1970
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 5,
+    "Year": 1971
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 5,
+    "Year": 1972
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 5,
+    "Year": 1973
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 5,
+    "Year": 1974
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 6,
+    "Year": 1975
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 6,
+    "Year": 1976
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 6,
+    "Year": 1977
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 6,
+    "Year": 1978
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
     "Intensity": 2,
     "Year": 1990
   },
@@ -528,36 +582,6 @@
     "Year": 1990
   },
   {
-    "Code": 116,
-    "Country": "Cambodia",
-    "Intensity": 5,
-    "Year": 1970
-  },
-  {
-    "Code": 116,
-    "Country": "Cambodia",
-    "Intensity": 5,
-    "Year": 1971
-  },
-  {
-    "Code": 116,
-    "Country": "Cambodia",
-    "Intensity": 5,
-    "Year": 1972
-  },
-  {
-    "Code": 116,
-    "Country": "Cambodia",
-    "Intensity": 5,
-    "Year": 1973
-  },
-  {
-    "Code": 116,
-    "Country": "Cambodia",
-    "Intensity": 5,
-    "Year": 1974
-  },
-  {
     "Code": 360,
     "Country": "Indonesia",
     "Intensity": 5,
@@ -670,30 +694,6 @@
     "Country": "Indonesia",
     "Intensity": 5,
     "Year": 1992
-  },
-  {
-    "Code": 116,
-    "Country": "Cambodia",
-    "Intensity": 6,
-    "Year": 1975
-  },
-  {
-    "Code": 116,
-    "Country": "Cambodia",
-    "Intensity": 6,
-    "Year": 1976
-  },
-  {
-    "Code": 116,
-    "Country": "Cambodia",
-    "Intensity": 6,
-    "Year": 1977
-  },
-  {
-    "Code": 116,
-    "Country": "Cambodia",
-    "Intensity": 6,
-    "Year": 1978
   },
   {
     "Code": 408,

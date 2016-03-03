@@ -47,32 +47,32 @@
 			})
 			.interpolate("linear");
 
-			d3.json("cWars.json",function(error, json){
+			d3.json("cleanWars.json",function(error, json){
 				civData = json;
 				if(error){ console.log(error);}
-				var prev = civData[0].COUNTRY;
+				var prevName = civData[0].Country;
+				var prevYear = (civData[0].Year) - 1;
 				var cIntensities = [];
 				var avgTemp = [];
 				var repeats = [];
 				civData.forEach(function(country){
-					
-					if((country.COUNTRY != prev)) {
+					if((country.Country != prevName) || Math.abs(country.Year-prevYear) > 1) {
 
-						if( (country.COUNTRY in repeats && avg(avgTemp) > cIntensities[repeats.indexOf(country.COUNTRY)]["avg"]) ){
-							cIntensities[country.COUNTRY] = avg(avgTemp);
-							console.log("hello");
+						if( (country.Country in repeats && avg(avgTemp) > cIntensities[repeats.indexOf(country.Country)]["avg"]) ){
+							cIntensities[country.Country] = avg(avgTemp);
 						}else{
-							repeats.push(country.COUNTRY);
-							var names = country.COUNTRY;
+							repeats.push(country.Country);
+							var names = country.Country;
 							cIntensities.push({name:names, avg:avg(avgTemp)});
-							console.log(cIntensities[repeats.indexOf(country.COUNTRY)]["avg"]);
+							//console.log(cIntensities[repeats.indexOf(country.Country)]["avg"]);
 						}
 
 						avgTemp = [];
 
 					}
-					avgTemp.push(country.CIVWAR);
-					prev = country.COUNTRY;
+					avgTemp.push(country.Intensity);
+					prevName = country.Country;
+					prevYear = country.Year;
 				});
 				console.log(cIntensities);
 			});
