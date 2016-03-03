@@ -17,6 +17,13 @@
 				}
 				return sum/l.length;
 			}
+			//function taken from http://www.endmemo.com/js/arrcontains.php
+			Array.prototype.contains = function(elem){
+				for (var i in this){
+					if (this[i] == elem) return true;
+				}
+				return false;
+			};
 
 			var height = 800;
 			var width = 600;
@@ -47,33 +54,39 @@
 			})
 			.interpolate("linear");
 
-			d3.json("cWars.json",function(error, json){
+			d3.json("cleanWars.json",function(error, json){
 				civData = json;
 				if(error){ console.log(error);}
-				var prev = civData[0].COUNTRY;
+				var prevName = civData[0].Country;
+				var prevYear = (civData[0].Year) - 1;
 				var cIntensities = [];
 				var avgTemp = [];
 				var repeats = [];
 				civData.forEach(function(country){
-					
-					if((country.COUNTRY != prev)) {
+					if((country.Country != prevName) || Math.abs(country.Year-prevYear) > 1) {
 
-						if( (country.COUNTRY in repeats && avg(avgTemp) > cIntensities[repeats.indexOf(country.COUNTRY)]["avg"]) ){
-							cIntensities[country.COUNTRY] = avg(avgTemp);
-							console.log("hello");
-						}else{
-							repeats.push(country.COUNTRY);
-							var names = country.COUNTRY;
+						if( (prevName in repeats && avg(avgTemp) > cIntensities[repeats.indexOf(prevName)]["avg"]) ){
+							cIntensities[prevName] = avg(avgTemp);
+							console.log("houston we have a problem");
+						}else if(!(repeats.contains(prevName))){
+							repeats.push(prevName);
+							var names = prevName;
 							cIntensities.push({name:names, avg:avg(avgTemp)});
-							console.log(cIntensities[repeats.indexOf(country.COUNTRY)]["avg"]);
+							//console.log(cIntensities[repeats.indexOf(country.Country)]["avg"]);
+						}else{
+							console.log("This should show up");
 						}
 
 						avgTemp = [];
 
 					}
-					avgTemp.push(country.CIVWAR);
-					prev = country.COUNTRY;
+					avgTemp.push(country.Intensity);
+					prevName = country.Country;
+					prevYear = country.Year;
+					if(prevName == "Indonesia")
+						console.log(country.Intensity);
 				});
+				cIntensities.push({name:prevName, avg:avg(avgTemp)});
 				console.log(cIntensities);
 			});
 
