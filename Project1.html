@@ -70,8 +70,7 @@
 							console.log("houston we have a problem");
 						}else if(!(repeats.contains(prevName))){
 							repeats.push(prevName);
-							var names = prevName;
-							cIntensities.push({name:names, avg:avg(avgTemp)});
+							cIntensities.push({Name:prevName, Avg:avg(avgTemp)});
 							//console.log(cIntensities[repeats.indexOf(country.Country)]["avg"]);
 						}else{
 							//console.log("This should show up");
@@ -83,36 +82,33 @@
 					avgTemp.push(country.Intensity);
 					prevName = country.Country;
 					prevYear = country.Year;
-					if(prevName == "Indonesia"){
-						console.log(country.Intensity);
-					};
-					cIntensities.push({name:prevName, avg:avg(avgTemp)});
-					
+					// if(prevName == "Indonesia"){
+					// 	console.log(country.Intensity);
+					// };
 				});
+				// console.log(cIntensities);
 			});
-			var gdp = []
+			
 			d3.json("cleanGdp.json",function(error, json){
 				gdpData = json;
 				if(error){ console.log(error); }
-
-				
-
+				var gdp = []
 				gdpData.forEach(function(country){
 
-					gdp.push({name:country.Country, year: parseInt(country.Year), GDP: country.GDP, code: country.Code });
+					gdp.push({Name:country.Country, Year: parseInt(country.Year), GDP: country.GDP, Code: country.Code });
 				});
-				
-				drawDemGraphs(gdp);
+
+				drawDemLines(gdp);
 
 			});
-   			
-   			function drawDemGraphs(gdp){
+
+   			function drawDemLines(gdp){
 	   			gdpCoords = [];
-	   			curCountry = gdp[0].name;
-	   			prevYear = gdp[0].year -1;
+	   			curCountry = gdp[0].Name;
+	   			prevYear = gdp[0].Year -1;
 	   			gdp.forEach(function(country){
 
-	   				if(curCountry != country.name || (country.year - prevYear != 1)){
+	   				if(curCountry != country.Name || (country.Year - prevYear != 1)){
 	   					//Draw path when reach new war/country
 	   					svg.append("path")
 	   						.attr("d", lineFunction(gdpCoords))
@@ -124,9 +120,9 @@
 	   					console.log('new line');
 	   				}
 	   				//Push new coordinates
-	   				gdpCoords.push({x: country.year, y: country.GDP});
-	   				prevYear = country.year;
-	   				curCountry = country.name;
+	   				gdpCoords.push({x: country.Year, y: country.GDP});
+	   				prevYear = country.Year;
+	   				curCountry = country.Name;
 
 	   			});
 	   			
