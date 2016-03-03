@@ -18,9 +18,9 @@
 				return sum/l.length;
 			}
 
-			var height = 960;
-			var width = 500;
-			padding = 40;
+			var height = 800;
+			var width = 600;
+			padding = 70;
 			var svg = d3.select("#linePlot").append("svg").attr("width",width)
 				.attr("height",height);
 				
@@ -30,8 +30,8 @@
 			var xScale = d3.scale.linear().domain([1960,2014]).range([padding,width-padding]);
 			var yScale = d3.scale.linear().domain([0,120000]).range([height-padding,padding]);
 
-			var xAxis = d3.svg.axis().scale(xScale).orient("bottom").ticks(40);
-			var yAxis = d3.svg.axis().scale(yScale).orient("left").ticks(100);
+			var xAxis = d3.svg.axis().scale(xScale).orient("bottom").ticks(10).tickFormat(d3.format('f%'));
+			var yAxis = d3.svg.axis().scale(yScale).orient("left").ticks(40);
 
 			svg.append("g").attr("class", "axis")
 				.attr("transform", "translate(0," + (height-padding) + ")").call(xAxis);
