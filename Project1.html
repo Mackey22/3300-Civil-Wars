@@ -26,7 +26,7 @@
 			};
 
 			var height = 800;
-			var width = 600;
+			var width = 900;
 			padding = 70;
 			var svg = d3.select("#linePlot").append("svg").attr("width",width)
 				.attr("height",height);
@@ -35,7 +35,7 @@
 			var g = svg.append("g");
 
 			var xScale = d3.scale.linear().domain([1960,2014]).range([padding,width-padding]);
-			var yScale = d3.scale.linear().domain([0,120000]).range([height-padding,padding]);
+			var yScale = d3.scale.linear().domain([50, 1400]).range([height-padding,padding]);
 
 			var xAxis = d3.svg.axis().scale(xScale).orient("bottom").ticks(10).tickFormat(d3.format('f%'));
 			var yAxis = d3.svg.axis().scale(yScale).orient("left").ticks(40);
@@ -52,7 +52,7 @@
 			.y(function(d){
 				return yScale(d.y);
 			})
-			.interpolate("linear");
+			.interpolate("basis");
 
 			d3.json("cleanWars.json",function(error, json){
 				civData = json;
@@ -74,7 +74,7 @@
 							cIntensities.push({name:names, avg:avg(avgTemp)});
 							//console.log(cIntensities[repeats.indexOf(country.Country)]["avg"]);
 						}else{
-							console.log("This should show up");
+							//console.log("This should show up");
 						}
 
 						avgTemp = [];
@@ -83,21 +83,62 @@
 					avgTemp.push(country.Intensity);
 					prevName = country.Country;
 					prevYear = country.Year;
-					if(prevName == "Indonesia")
+					if(prevName == "Indonesia"){
 						console.log(country.Intensity);
+					};
+					cIntensities.push({name:prevName, avg:avg(avgTemp)});
+					
 				});
-				cIntensities.push({name:prevName, avg:avg(avgTemp)});
-				console.log(cIntensities);
 			});
-
-			/*d3.json("gdp.json",function(error, json){
+			var gdp = []
+			d3.json("cleanGdp.json",function(error, json){
 				gdpData = json;
 				if(error){ console.log(error); }
-				gdpData.forEach({
 
-				}
-			});*/
+				
+
+				gdpData.forEach(function(country){
+
+					gdp.push({name:country.Country, year: parseInt(country.Year), GDP: country.GDP, code: country.Code });
+				});
+				
+				drawDemGraphs(gdp);
+
+			});
+   			
+   			function drawDemGraphs(gdp){
+	   			gdpCoords = [];
+	   			curCountry = gdp[0].name;
+	   			prevYear = gdp[0].year -1;
+	   			gdp.forEach(function(country){
+
+	   				if(curCountry != country.name || (country.year - prevYear != 1)){
+	   					//Draw path when reach new war/country
+	   					svg.append("path")
+	   						.attr("d", lineFunction(gdpCoords))
+	   						.attr("stroke", "blue")
+	   						.attr("fill", "none");
+
+	   					//Reset for next line
+	   					gdpCoords = [];
+	   					console.log('new line');
+	   				}
+	   				//Push new coordinates
+	   				gdpCoords.push({x: country.year, y: country.GDP});
+	   				prevYear = country.year;
+	   				curCountry = country.name;
+
+	   			});
+	   			
+	   			//Draw last war
+				svg.append("path")
+					.attr("d", lineFunction(gdpCoords))
+					.attr("stroke", "blue")
+					.attr("fill", "none");
+			};
+
 
 		</script>
 	</body>
 </html>
+
