@@ -17,6 +17,13 @@
 				}
 				return sum/l.length;
 			}
+			//function taken from http://www.endmemo.com/js/arrcontains.php
+			Array.prototype.contains = function(elem){
+				for (var i in this){
+					if (this[i] == elem) return true;
+				}
+				return false;
+			};
 
 			var height = 960;
 			var width = 500;
@@ -58,13 +65,16 @@
 				civData.forEach(function(country){
 					if((country.Country != prevName) || Math.abs(country.Year-prevYear) > 1) {
 
-						if( (country.Country in repeats && avg(avgTemp) > cIntensities[repeats.indexOf(country.Country)]["avg"]) ){
-							cIntensities[country.Country] = avg(avgTemp);
-						}else{
-							repeats.push(country.Country);
-							var names = country.Country;
+						if( (prevName in repeats && avg(avgTemp) > cIntensities[repeats.indexOf(prevName)]["avg"]) ){
+							cIntensities[prevName] = avg(avgTemp);
+							console.log("houston we have a problem");
+						}else if(!(repeats.contains(prevName))){
+							repeats.push(prevName);
+							var names = prevName;
 							cIntensities.push({name:names, avg:avg(avgTemp)});
 							//console.log(cIntensities[repeats.indexOf(country.Country)]["avg"]);
+						}else{
+							console.log("This should show up");
 						}
 
 						avgTemp = [];
@@ -73,7 +83,10 @@
 					avgTemp.push(country.Intensity);
 					prevName = country.Country;
 					prevYear = country.Year;
+					if(prevName == "Indonesia")
+						console.log(country.Intensity);
 				});
+				cIntensities.push({name:prevName, avg:avg(avgTemp)});
 				console.log(cIntensities);
 			});
 
