@@ -1,0 +1,1290 @@
+[
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 2,
+    "GDP": 0,
+    "Year": 1990
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 2,
+    "GDP": 0,
+    "Year": 1991
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 2,
+    "GDP": 0,
+    "Year": 1992
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 2,
+    "GDP": 253.1931946,
+    "Year": 1993
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 2,
+    "GDP": 269.567076,
+    "Year": 1994
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 2,
+    "GDP": 321.7746398,
+    "Year": 1995
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 2,
+    "GDP": 318.1495354,
+    "Year": 1996
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 2,
+    "GDP": 303.6859047,
+    "Year": 1997
+  },
+  {
+    "Code": 268,
+    "Country": "Georgia",
+    "Intensity": 1,
+    "GDP": 1314.67067,
+    "Year": 1991
+  },
+  {
+    "Code": 268,
+    "Country": "Georgia",
+    "Intensity": 1,
+    "GDP": 757.2235485,
+    "Year": 1992
+  },
+  {
+    "Code": 268,
+    "Country": "Georgia",
+    "Intensity": 1,
+    "GDP": 550.0155426,
+    "Year": 1993
+  },
+  {
+    "Code": 418,
+    "Country": "Laos",
+    "Intensity": 3,
+    "GDP": 0,
+    "Year": 1960
+  },
+  {
+    "Code": 418,
+    "Country": "Laos",
+    "Intensity": 3,
+    "GDP": 0,
+    "Year": 1961
+  },
+  {
+    "Code": 418,
+    "Country": "Laos",
+    "Intensity": 3,
+    "GDP": 0,
+    "Year": 1962
+  },
+  {
+    "Code": 418,
+    "Country": "Laos",
+    "Intensity": 3,
+    "GDP": 0,
+    "Year": 1963
+  },
+  {
+    "Code": 418,
+    "Country": "Laos",
+    "Intensity": 3,
+    "GDP": 0,
+    "Year": 1964
+  },
+  {
+    "Code": 418,
+    "Country": "Laos",
+    "Intensity": 3,
+    "GDP": 0,
+    "Year": 1965
+  },
+  {
+    "Code": 418,
+    "Country": "Laos",
+    "Intensity": 3,
+    "GDP": 0,
+    "Year": 1966
+  },
+  {
+    "Code": 418,
+    "Country": "Laos",
+    "Intensity": 3,
+    "GDP": 0,
+    "Year": 1967
+  },
+  {
+    "Code": 418,
+    "Country": "Laos",
+    "Intensity": 3,
+    "GDP": 0,
+    "Year": 1968
+  },
+  {
+    "Code": 418,
+    "Country": "Laos",
+    "Intensity": 3,
+    "GDP": 0,
+    "Year": 1969
+  },
+  {
+    "Code": 418,
+    "Country": "Laos",
+    "Intensity": 3,
+    "GDP": 0,
+    "Year": 1970
+  },
+  {
+    "Code": 418,
+    "Country": "Laos",
+    "Intensity": 3,
+    "GDP": 0,
+    "Year": 1971
+  },
+  {
+    "Code": 418,
+    "Country": "Laos",
+    "Intensity": 3,
+    "GDP": 0,
+    "Year": 1972
+  },
+  {
+    "Code": 418,
+    "Country": "Laos",
+    "Intensity": 3,
+    "GDP": 0,
+    "Year": 1973
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "Intensity": 2,
+    "GDP": 206.4409708,
+    "Year": 1996
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "Intensity": 2,
+    "GDP": 219.6310635,
+    "Year": 1997
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "Intensity": 2,
+    "GDP": 212.3742546,
+    "Year": 1998
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "Intensity": 2,
+    "GDP": 215.8966735,
+    "Year": 1999
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "Intensity": 2,
+    "GDP": 231.4329676,
+    "Year": 2000
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "Intensity": 2,
+    "GDP": 248.8329359,
+    "Year": 2001
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "Intensity": 2,
+    "GDP": 246.8035835,
+    "Year": 2002
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "Intensity": 2,
+    "GDP": 254.5539382,
+    "Year": 2003
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "Intensity": 2,
+    "GDP": 288.6695954,
+    "Year": 2004
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "Intensity": 2,
+    "GDP": 318.7480983,
+    "Year": 2005
+  },
+  {
+    "Code": 524,
+    "Country": "Nepal",
+    "Intensity": 2,
+    "GDP": 350.608465,
+    "Year": 2006
+  },
+  {
+    "Code": 760,
+    "Country": "Syria",
+    "Intensity": 3,
+    "GDP": 1147.687513,
+    "Year": 1979
+  },
+  {
+    "Code": 760,
+    "Country": "Syria",
+    "Intensity": 3,
+    "GDP": 1458.485206,
+    "Year": 1980
+  },
+  {
+    "Code": 760,
+    "Country": "Syria",
+    "Intensity": 3,
+    "GDP": 1672.713089,
+    "Year": 1981
+  },
+  {
+    "Code": 760,
+    "Country": "Syria",
+    "Intensity": 3,
+    "GDP": 1695.415465,
+    "Year": 1982
+  },
+  {
+    "Code": 762,
+    "Country": "Tajikistan",
+    "Intensity": 3,
+    "GDP": 345.6771837,
+    "Year": 1992
+  },
+  {
+    "Code": 762,
+    "Country": "Tajikistan",
+    "Intensity": 3,
+    "GDP": 293.1731154,
+    "Year": 1993
+  },
+  {
+    "Code": 762,
+    "Country": "Tajikistan",
+    "Intensity": 3,
+    "GDP": 236.0452889,
+    "Year": 1994
+  },
+  {
+    "Code": 762,
+    "Country": "Tajikistan",
+    "Intensity": 3,
+    "GDP": 212.9067853,
+    "Year": 1995
+  },
+  {
+    "Code": 762,
+    "Country": "Tajikistan",
+    "Intensity": 3,
+    "GDP": 178.0711659,
+    "Year": 1996
+  },
+  {
+    "Code": 762,
+    "Country": "Tajikistan",
+    "Intensity": 3,
+    "GDP": 155.2766173,
+    "Year": 1997
+  },
+  {
+    "Code": 762,
+    "Country": "Tajikistan",
+    "Intensity": 3,
+    "GDP": 219.5706981,
+    "Year": 1998
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "GDP": 137.9180311,
+    "Year": 1965
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "GDP": 161.0056786,
+    "Year": 1966
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "GDP": 166.9245655,
+    "Year": 1967
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "GDP": 174.7871299,
+    "Year": 1968
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "GDP": 186.8806592,
+    "Year": 1969
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "GDP": 192.1256596,
+    "Year": 1970
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "GDP": 194.2582535,
+    "Year": 1971
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "GDP": 209.3562328,
+    "Year": 1972
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "GDP": 269.8519129,
+    "Year": 1973
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "GDP": 332.117105,
+    "Year": 1974
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "GDP": 351.5480432,
+    "Year": 1975
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "GDP": 391.4829096,
+    "Year": 1976
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "GDP": 445.3194619,
+    "Year": 1977
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "GDP": 528.5061204,
+    "Year": 1978
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "GDP": 589.749796,
+    "Year": 1979
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "GDP": 682.7749836,
+    "Year": 1980
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "GDP": 720.8994131,
+    "Year": 1981
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "GDP": 742.7043325,
+    "Year": 1982
+  },
+  {
+    "Code": 764,
+    "Country": "Thailand",
+    "Intensity": 2,
+    "GDP": 797.9338368,
+    "Year": 1983
+  },
+  {
+    "Code": 887,
+    "Country": "Yemen, South",
+    "Intensity": 2,
+    "GDP": 0,
+    "Year": 1986
+  },
+  {
+    "Code": 887,
+    "Country": "Yemen, South",
+    "Intensity": 2,
+    "GDP": 0,
+    "Year": 1987
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "GDP": 2167.858394,
+    "Year": 1978
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "GDP": 2426.186619,
+    "Year": 1979
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "GDP": 2440.305624,
+    "Year": 1980
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "GDP": 2499.418532,
+    "Year": 1981
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "GDP": 3008.638599,
+    "Year": 1982
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "GDP": 3585.492961,
+    "Year": 1983
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "GDP": 3572.094037,
+    "Year": 1984
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "GDP": 3810.120632,
+    "Year": 1985
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "GDP": 4249.407613,
+    "Year": 1986
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "GDP": 2619.832517,
+    "Year": 1987
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "GDP": 2320.27306,
+    "Year": 1988
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "GDP": 2201.440336,
+    "Year": 1989
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "GDP": 2222.094654,
+    "Year": 1990
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "GDP": 0,
+    "Year": 1991
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "GDP": 0,
+    "Year": 1992
+  },
+  {
+    "Code": 364,
+    "Country": "Iran",
+    "Intensity": 4,
+    "GDP": 1083.856647,
+    "Year": 1993
+  },
+  {
+    "Code": 144,
+    "Country": "Sri Lanka",
+    "Intensity": 4,
+    "GDP": 408.1211213,
+    "Year": 1987
+  },
+  {
+    "Code": 144,
+    "Country": "Sri Lanka",
+    "Intensity": 4,
+    "GDP": 420.409156,
+    "Year": 1988
+  },
+  {
+    "Code": 144,
+    "Country": "Sri Lanka",
+    "Intensity": 4,
+    "GDP": 415.2907984,
+    "Year": 1989
+  },
+  {
+    "Code": 144,
+    "Country": "Sri Lanka",
+    "Intensity": 4,
+    "GDP": 472.0864633,
+    "Year": 1990
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 5,
+    "GDP": 102.3045029,
+    "Year": 1970
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 5,
+    "GDP": 135.3166668,
+    "Year": 1971
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 5,
+    "GDP": 68.9589809,
+    "Year": 1972
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 5,
+    "GDP": 93.99376256,
+    "Year": 1973
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 5,
+    "GDP": 77.82019898,
+    "Year": 1974
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "GDP": 0,
+    "Year": 1965
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "GDP": 0,
+    "Year": 1966
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "GDP": 293.4741494,
+    "Year": 1976
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "GDP": 352.4278737,
+    "Year": 1977
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "GDP": 386.0080813,
+    "Year": 1978
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "GDP": 382.6537655,
+    "Year": 1979
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "GDP": 528.9376395,
+    "Year": 1980
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "GDP": 612.49562,
+    "Year": 1981
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "GDP": 613.0182695,
+    "Year": 1982
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "GDP": 540.1598074,
+    "Year": 1983
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "GDP": 542.3052366,
+    "Year": 1984
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "GDP": 529.2873919,
+    "Year": 1985
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "GDP": 475.4138595,
+    "Year": 1986
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "GDP": 442.1481221,
+    "Year": 1987
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "GDP": 507.3551831,
+    "Year": 1988
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "GDP": 569.2271706,
+    "Year": 1989
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "GDP": 630.6685568,
+    "Year": 1990
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "GDP": 694.2457566,
+    "Year": 1991
+  },
+  {
+    "Code": 360,
+    "Country": "Indonesia",
+    "Intensity": 5,
+    "GDP": 740.9177479,
+    "Year": 1992
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 6,
+    "GDP": 0,
+    "Year": 1975
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 6,
+    "GDP": 0,
+    "Year": 1976
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 6,
+    "GDP": 0,
+    "Year": 1977
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 6,
+    "GDP": 0,
+    "Year": 1978
+  },
+  {
+    "Code": 408,
+    "Country": "Korea North",
+    "Intensity": 6,
+    "GDP": 0,
+    "Year": 1950
+  },
+  {
+    "Code": 408,
+    "Country": "Korea North",
+    "Intensity": 6,
+    "GDP": 0,
+    "Year": 1951
+  },
+  {
+    "Code": 408,
+    "Country": "Korea North",
+    "Intensity": 6,
+    "GDP": 0,
+    "Year": 1952
+  },
+  {
+    "Code": 408,
+    "Country": "Korea North",
+    "Intensity": 6,
+    "GDP": 0,
+    "Year": 1953
+  },
+  {
+    "Code": 410,
+    "Country": "Korea South",
+    "Intensity": 6,
+    "GDP": 0,
+    "Year": 1950
+  },
+  {
+    "Code": 410,
+    "Country": "Korea South",
+    "Intensity": 6,
+    "GDP": 0,
+    "Year": 1951
+  },
+  {
+    "Code": 410,
+    "Country": "Korea South",
+    "Intensity": 6,
+    "GDP": 0,
+    "Year": 1952
+  },
+  {
+    "Code": 410,
+    "Country": "Korea South",
+    "Intensity": 6,
+    "GDP": 0,
+    "Year": 1953
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "GDP": 249.5737098,
+    "Year": 1978
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "GDP": 278.3906252,
+    "Year": 1979
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "GDP": 275.6498281,
+    "Year": 1980
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "GDP": 267.6624236,
+    "Year": 1981
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1982
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1983
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1984
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1985
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1986
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1987
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1988
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1989
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1990
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1991
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1992
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1993
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1994
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1995
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1996
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1997
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1998
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1999
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 2000
+  },
+  {
+    "Code": 4,
+    "Country": "Afghanistan",
+    "Intensity": 7,
+    "GDP": 119.8990371,
+    "Year": 2001
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1958
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1959
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1960
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1961
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1962
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1963
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1964
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1965
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1966
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1967
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1968
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1969
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1970
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1971
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1972
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1973
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1974
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, North",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1975
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1958
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1959
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1960
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1961
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1962
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1963
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1964
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1965
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1966
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1967
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1968
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1969
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1970
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1971
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1972
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1973
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1974
+  },
+  {
+    "Code": 704,
+    "Country": "Vietnam, South",
+    "Intensity": 7,
+    "GDP": 0,
+    "Year": 1975
+  }
+]
