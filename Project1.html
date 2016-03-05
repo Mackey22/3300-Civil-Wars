@@ -3,6 +3,28 @@
 		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 		<script src="http://d3js.org/topojson.v1.min.js"></script>
 		<title>What is the project called</title>
+		<style>
+			
+			.axis path,
+			.axis line{
+				fill: none;
+				stroke: black;
+			}
+
+			.line{
+				fill: none;
+				stroke: blue;
+				stroke-width: 5px;
+			}
+
+			.tick text{
+				font-size: 12px;
+			}	
+			.tick line{
+				opacity: 0.2;
+			}
+
+		</style>
 	</head>
 
 	<body>
@@ -40,14 +62,22 @@
 			var xScale = d3.scale.linear().domain([1960,2014]).range([padding,width-padding]);
 			var yScale = d3.scale.linear().domain([50, 4200]).range([height-padding,padding]);
 
-			var xAxis = d3.svg.axis().scale(xScale).orient("bottom").ticks(10).tickFormat(d3.format('f%'));
-			var yAxis = d3.svg.axis().scale(yScale).orient("left").ticks(30);
+			var xAxis = d3.svg.axis().scale(xScale).orient("bottom").innerTickSize(-height +2*padding).outerTickSize(0).tickPadding(10).tickFormat(d3.format('f%'));//ticks(10).tickFormat(d3.format('f%'));
+			var yAxis = d3.svg.axis().scale(yScale).orient("left").innerTickSize(-width+ 2*padding).outerTickSize(0).tickPadding(10);//ticks(30);
+
+			svg.append("rect")
+				.attr("x",padding)
+				.attr("y",padding)
+				.attr("width",width-(2*padding))
+				.attr("height",height - (2*padding))
+				.attr("fill","#cccccc");
 
 			svg.append("g").attr("class", "axis")
 				.attr("transform", "translate(0," + (height-padding) + ")").call(xAxis);
 
 			svg.append("g").attr("class","axis")
 				.attr("transform","translate(" + padding + ",0)").call(yAxis);
+
 
 			//Create a line function for gdp over time
 			var lineFunction = d3.svg.line().x(function(d){
@@ -59,7 +89,7 @@
 			.interpolate("basis");
 
 			//Color scale
-			var colorGradient = d3.scale.linear().domain([1,10]).range([1,10]);
+			var colorGradient = d3.scale.linear().domain([1,7]).range(["blue","red"]);
 
 			//Let's look at our data and make some graphs!
 			d3.json("realCleanWars.json",function(error, json){
@@ -91,7 +121,6 @@
 						}else if(!(repeats.contains(prevName))){ //Add country object
 							repeats.push(prevName);
 							countryObjects.push({Name:prevName, Intensity: avg(avgTemp), Years: yearsTemp, GDP: gdpTemp, Code: prevCode});
-							//console.log(cIntensities[repeats.indexOf(country.Country)]["avg"]);
 						}
 
 						avgTemp = [];
@@ -118,9 +147,6 @@
 				//Edge case
 				countryObjects[repeats.indexOf('Afghanistan')].GDP.pop();
 				countryObjects[repeats.indexOf('Afghanistan')].Years.pop();
-
-				// console.log(cIntensities);
-				// console.log(gdp);
 
 				//Creates our line graph
 				drawDemLines(countryObjects);
@@ -150,7 +176,7 @@
 					countries.forEach(function (country) {
 						
 						if(whatWeHave.contains(country.id)){
-							cInt = findIntensity(cIntensities,country.id);
+							cInt = findIntensity(countryObjects,country.id);
 							mapg.append("path").attr("d", path(country))
 							.style("fill", "#ddffdd")
 							.style("stroke", "#222");
@@ -193,46 +219,26 @@
 	   				for(var i = 0; i<country.GDP.length; i++){
 	   					gdpCoords.push({x:country.Years[i] , y: country.GDP[i]});
 	   				}
-	   				console.log(colorGradient(country.Intensity))
+	   				
 	   				svg.append("path")
 						.attr("d", lineFunction(gdpCoords))
-						.attr("stroke", "blue")//colorGradient(country.Intensity))
-						.attr("stroke-width",colorGradient(country.Intensity))
+						.attr("stroke", colorGradient(country.Intensity))
+						.attr("stroke-width",3)
 						.attr("class",country.Name)
 						.attr("fill", "none")
 						.attr("class",country.Name);
 
 	   			})
 	   			
-	   			//Draw last war
-				svg.append("path")
-					.attr("d", lineFunction(gdpCoords))
-					.attr("stroke", "blue")
-					.attr("stroke-width",3)
-					.attr("fill", "none");
+	  //  			//Draw last war
+			// 	svg.append("path")
+			// 		.attr("d", lineFunction(gdpCoords))
+			// 		.attr("stroke", "blue")
+			// 		.attr("stroke-width",3)
+			// 		.attr("fill", "none");
 			};
 			
 		</script>
 	</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
