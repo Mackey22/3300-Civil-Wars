@@ -75,14 +75,14 @@
 				civData.forEach(function(country){
 					whatWeHave.push(country.Code);
 					if((country.Code != prevCode) || Math.abs(country.Year-prevYear) > 1) {
-						if( (prevName in repeats && avg(avgTemp) > cIntensities[repeats.indexOf(prevName)].Intensity) ){
+						if( (prevName in repeats && avg(avgTemp) > countryObjects[repeats.indexOf(prevName)].Intensity) ){
 							// cIntensities[prevName] = avg(avgTemp);
 							gdp[repeats.indexOf(prevName)].Intensity = avg(avgTemp);
 
 							console.log("houston we have a problem");
 						}else if(!(repeats.contains(prevName))){
 							repeats.push(prevName);
-							cIntensities.push({Name:prevName, Intensity: avg(avgTemp), Years: yearsTemp, GDP: gdpTemp});
+							countryObjects.push({Name:prevName, Intensity: avg(avgTemp), Years: yearsTemp, GDP: gdpTemp});
 							//console.log(cIntensities[repeats.indexOf(country.Country)]["avg"]);
 
 						}
@@ -107,8 +107,8 @@
 				});
 				
 				//Edge case
-				cIntensities[repeats.indexOf('Afghanistan')].GDP.pop();
-				cIntensities[repeats.indexOf('Afghanistan')].Years.pop();
+				countryObjects[repeats.indexOf('Afghanistan')].GDP.pop();
+				countryObjects[repeats.indexOf('Afghanistan')].Years.pop();
 
 				// console.log(cIntensities);
 				// console.log(gdp);
@@ -173,7 +173,7 @@
 				return -1;
 			}
 
-   			function drawDemLines(gdp){
+   			function drawDemLines(intensity){
 	   			gdpCoords = [];
 	   			
 	   			
