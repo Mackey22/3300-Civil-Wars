@@ -2,7 +2,7 @@
 	<head>
 		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 		<script src="http://d3js.org/topojson.v1.min.js"></script>
-		<title>What is the project called</title>
+		<title>Civil Wars and GDP</title>
 		<style>
 			
 			.axis path,
@@ -29,6 +29,7 @@
 
 	<body>
 		<div id = "linePlot"></div>
+		<br><br><br><br><br><br><br>
 		<div id = "map"></div>
 
 		<script>
@@ -50,7 +51,7 @@
 
 			//Svg initializations
 			var height = 800;
-			var width = 1100;
+			var width = 1300;
 			padding = 70;
 			var svg = d3.select("#linePlot").append("svg").attr("width",width)
 				.attr("height",height);
@@ -60,17 +61,17 @@
 
 			//Create our line graph scale and axes
 			var xScale = d3.scale.linear().domain([1960,2014]).range([padding,width-padding]);
-			var yScale = d3.scale.linear().domain([50, 4200]).range([height-padding,padding]);
+			var yScale = d3.scale.linear().domain([0, 4300]).range([height-padding,padding]);
 
-			var xAxis = d3.svg.axis().scale(xScale).orient("bottom").innerTickSize(-height +2*padding).outerTickSize(0).tickPadding(10).tickFormat(d3.format('f%'));//ticks(10).tickFormat(d3.format('f%'));
-			var yAxis = d3.svg.axis().scale(yScale).orient("left").innerTickSize(-width+ 2*padding).outerTickSize(0).tickPadding(10);//ticks(30);
+			var xAxis = d3.svg.axis().scale(xScale).orient("bottom").innerTickSize(-height +2*padding).outerTickSize(0).tickPadding(10).tickFormat(d3.format('f%'));
+			var yAxis = d3.svg.axis().scale(yScale).orient("left").innerTickSize(-width+ 2*padding).outerTickSize(0).tickPadding(10);
 
 			svg.append("rect")
 				.attr("x",padding)
 				.attr("y",padding)
 				.attr("width",width-(2*padding))
 				.attr("height",height - (2*padding))
-				.attr("fill","#cccccc");
+				.attr("fill","#d9d9d9");
 
 			svg.append("g").attr("class", "axis")
 				.attr("transform", "translate(0," + (height-padding) + ")").call(xAxis);
@@ -147,6 +148,7 @@
 				//Edge case
 				countryObjects[repeats.indexOf('Afghanistan')].GDP.pop();
 				countryObjects[repeats.indexOf('Afghanistan')].Years.pop();
+				countryObjects[repeats.indexOf('Laos')].GDP = [];
 
 				//Creates our line graph
 				drawDemLines(countryObjects);
@@ -224,18 +226,21 @@
 						.attr("d", lineFunction(gdpCoords))
 						.attr("stroke", colorGradient(country.Intensity))
 						.attr("stroke-width",3)
-						.attr("class",country.Name)
 						.attr("fill", "none")
 						.attr("class",country.Name);
-
+					console.log(country.Name);
 	   			})
-	   			
-	  //  			//Draw last war
-			// 	svg.append("path")
-			// 		.attr("d", lineFunction(gdpCoords))
-			// 		.attr("stroke", "blue")
-			// 		.attr("stroke-width",3)
-			// 		.attr("fill", "none");
+	   			xText = [1966,1979,1980.5,1979,1986.5, 1985.5,1992.25,1993,2001,1975,1965.25];
+	   			yText = [210,320,1400,2500,480,100,800,320,300, 120,50];
+	   			countries = ["Thailand","Afghanistan","Syria","Iran","Sri Lanka","Yemen","Georgia","Tajikistan","Nepal","Cambodia","North Vietnam",]
+
+	   			for(var i = 0; i<xText.length; i++){
+	   				svg.append("text")
+	   				.attr("x", xScale(xText[i]))
+	   				.attr("y", yScale(yText[i]))
+	   				.text(countries[i])
+	   			}
+
 			};
 			
 		</script>
