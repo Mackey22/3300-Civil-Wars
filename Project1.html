@@ -10,7 +10,7 @@
 		<div id = "map"></div>
 
 		<script>
-			//we did it
+			//Needed for intensity average
 			function avg(l){
 				var sum = 0;
 				for(var i=0;i<l.length;i++){
@@ -26,6 +26,7 @@
 				return false;
 			};
 
+			//Svg initializations
 			var height = 800;
 			var width = 1100;
 			padding = 70;
@@ -35,6 +36,7 @@
 			//20px margin
 			var g = svg.append("g");
 
+			//Create our line graph scale and axes
 			var xScale = d3.scale.linear().domain([1960,2014]).range([padding,width-padding]);
 			var yScale = d3.scale.linear().domain([50, 4200]).range([height-padding,padding]);
 
@@ -47,6 +49,7 @@
 			svg.append("g").attr("class","axis")
 				.attr("transform","translate(" + padding + ",0)").call(yAxis);
 
+			//Create a line function for gdp over time
 			var lineFunction = d3.svg.line().x(function(d){
 				return xScale(d.x);
 			})
@@ -55,13 +58,16 @@
 			})
 			.interpolate("basis");
 
-
+			//Color scale
 			var colorGradient = d3.scale.linear().domain([1,7]).range(["blue","grey","red"]);
 
+			//Let's look at our data and make some graphs!
 			d3.json("realCleanWars.json",function(error, json){
 				civData = json;
 				var whatWeHave = [];
 				if(error){ console.log(error);}
+
+				//Initializations for data manipulation
 				var prevCode = civData[0].Code;
 				var prevYear = (civData[0].Year) - 1;
 				var start = civData[0].Year;
@@ -74,17 +80,18 @@
 
 				civData.forEach(function(country){
 					whatWeHave.push(country.Code);
+
+					//Checks to see if we've moved on to a new country
 					if((country.Code != prevCode) || Math.abs(country.Year-prevYear) > 1) {
+
+						//Edge case in case there's another a country with multiple wars only take one
 						if( (prevName in repeats && avg(avgTemp) > countryObjects[repeats.indexOf(prevName)].Intensity) ){
-							// cIntensities[prevName] = avg(avgTemp);
-							gdp[repeats.indexOf(prevName)].Intensity = avg(avgTemp);
+							countryObjects[repeats.indexOf(prevName)].Intensity = avg(avgTemp);
 
-							console.log("houston we have a problem");
-						}else if(!(repeats.contains(prevName))){
+						}else if(!(repeats.contains(prevName))){ //Add country object
 							repeats.push(prevName);
-							countryObjects.push({Name:prevName, Intensity: avg(avgTemp), Years: yearsTemp, GDP: gdpTemp});
+							countryObjects.push({Name:prevName, Intensity: avg(avgTemp), Years: yearsTemp, GDP: gdpTemp, Code: prevCode});
 							//console.log(cIntensities[repeats.indexOf(country.Country)]["avg"]);
-
 						}
 
 						avgTemp = [];
@@ -96,6 +103,7 @@
 
 					avgTemp.push(country.Intensity);
 
+					//Only want countries with GDP data
 					if(country.GDP != 0){
 						yearsTemp.push(country.Year)
 						gdpTemp.push(country.GDP);
@@ -103,6 +111,7 @@
 
 					prevName = country.Country;
 					prevYear = country.Year;
+					prevCode = country.Code;
 					
 				});
 				
@@ -112,8 +121,11 @@
 
 				// console.log(cIntensities);
 				// console.log(gdp);
+
+				//Creates our line graph
 				drawDemLines(cIntensities);
 				
+				//Initialize map svg
 				var mapHeight = 500;
 				var mapWidth = 960;
 
