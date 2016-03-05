@@ -26,7 +26,7 @@
 			};
 
 			var height = 800;
-			var width = 900;
+			var width = 1100;
 			padding = 70;
 			var svg = d3.select("#linePlot").append("svg").attr("width",width)
 				.attr("height",height);
@@ -35,10 +35,10 @@
 			var g = svg.append("g");
 
 			var xScale = d3.scale.linear().domain([1960,2014]).range([padding,width-padding]);
-			var yScale = d3.scale.linear().domain([50, 1400]).range([height-padding,padding]);
+			var yScale = d3.scale.linear().domain([50, 4200]).range([height-padding,padding]);
 
 			var xAxis = d3.svg.axis().scale(xScale).orient("bottom").ticks(10).tickFormat(d3.format('f%'));
-			var yAxis = d3.svg.axis().scale(yScale).orient("left").ticks(40);
+			var yAxis = d3.svg.axis().scale(yScale).orient("left").ticks(30);
 
 			svg.append("g").attr("class", "axis")
 				.attr("transform", "translate(0," + (height-padding) + ")").call(xAxis);
@@ -54,87 +54,151 @@
 			})
 			.interpolate("basis");
 
-			d3.json("cleanWars.json",function(error, json){
+			var colorGradient = d3.scale.linear().domain([1,7]).range(["blue","grey","red"]);
+
+			d3.json("realCleanWars.json",function(error, json){
 				civData = json;
 				if(error){ console.log(error);}
 				var prevName = civData[0].Country;
 				var prevYear = (civData[0].Year) - 1;
+				var start = civData[0].Year;
 				var cIntensities = [];
 				var avgTemp = [];
 				var repeats = [];
+				var gdp = [];
+				var gdpTemp = [];
+				var yearsTemp = [];
+
 				civData.forEach(function(country){
 					if((country.Country != prevName) || Math.abs(country.Year-prevYear) > 1) {
 
-						if( (prevName in repeats && avg(avgTemp) > cIntensities[repeats.indexOf(prevName)]["avg"]) ){
-							cIntensities[prevName] = avg(avgTemp);
+						if( (prevName in repeats && avg(avgTemp) > cIntensities[repeats.indexOf(prevName)].Intensity) ){
+							// cIntensities[prevName] = avg(avgTemp);
+							gdp[repeats.indexOf(prevName)].Intensity = avg(avgTemp);
+
 							console.log("houston we have a problem");
 						}else if(!(repeats.contains(prevName))){
 							repeats.push(prevName);
-							cIntensities.push({Name:prevName, Avg:avg(avgTemp)});
+							cIntensities.push({Name:prevName, Intensity: avg(avgTemp), Years: yearsTemp, GDP: gdpTemp});
+
+							
 							//console.log(cIntensities[repeats.indexOf(country.Country)]["avg"]);
+
 						}else{
 							//console.log("This should show up");
 						}
 
 						avgTemp = [];
+						gdpTemp = [];
+						start = country.Year;
+						yearsTemp = [];
 
 					}
+
 					avgTemp.push(country.Intensity);
+					if(country.GDP != 0){
+						yearsTemp.push(country.Year)
+						gdpTemp.push(country.GDP);
+					}
+
 					prevName = country.Country;
 					prevYear = country.Year;
+					
+					// if( country.GDP != 0 ){
+					// 	gdp.push({Name:country.Country, Year: parseInt(country.Year), GDP: country.GDP, Code: country.Code});
+					// }
+					
+					
+
 					// if(prevName == "Indonesia"){
 					// 	console.log(country.Intensity);
 					// };
 				});
+				
+				//Edge case
+				cIntensities[repeats.indexOf('Afghanistan')].GDP.pop();
+				cIntensities[repeats.indexOf('Afghanistan')].Years.pop();
+
 				// console.log(cIntensities);
+				// console.log(gdp);
+				drawDemLines(cIntensities);
 			});
+
 			
-			d3.json("cleanGdp.json",function(error, json){
-				gdpData = json;
-				if(error){ console.log(error); }
-				var gdp = []
-				gdpData.forEach(function(country){
 
-					gdp.push({Name:country.Country, Year: parseInt(country.Year), GDP: country.GDP, Code: country.Code });
-				});
-
-				drawDemLines(gdp);
-
-			});
-
-   			function drawDemLines(gdp){
+   			function drawDemLines(intensity){
 	   			gdpCoords = [];
-	   			curCountry = gdp[0].Name;
-	   			prevYear = gdp[0].Year -1;
-	   			gdp.forEach(function(country){
-
-	   				if(curCountry != country.Name || (country.Year - prevYear != 1)){
-	   					//Draw path when reach new war/country
-	   					svg.append("path")
-	   						.attr("d", lineFunction(gdpCoords))
-	   						.attr("stroke", "blue")
-	   						.attr("fill", "none");
-
-	   					//Reset for next line
-	   					gdpCoords = [];
-	   					console.log('new line');
+	   			
+	   			
+	   			intensity.forEach(function(country){
+	   				gdpCoords = []
+	   				for(var i = 0; i<country.GDP.length; i++){
+	   					gdpCoords.push({x:country.Years[i] , y: country.GDP[i]});
 	   				}
-	   				//Push new coordinates
-	   				gdpCoords.push({x: country.Year, y: country.GDP});
-	   				prevYear = country.Year;
-	   				curCountry = country.Name;
+	   				console.log(colorGradient(country.Intensity))
+	   				svg.append("path")
+						.attr("d", lineFunction(gdpCoords))
+						.attr("stroke", colorGradient(country.Intensity))
+						.attr("stroke-width",3)
+						.attr("class",country.Name)
+						.attr("fill", "none")
+						.attr("class",country.Name);
 
-	   			});
+	   			})
+
+
+	   	// 		gdp.forEach(function(country){
+	   	// 			// console.log(colorGradient(cIntensities[indexOf()].Avg));
+	   				
+	   	// 				//Draw path when reach new war/country
+					// svg.append("path")
+					// 	.attr("d", lineFunction(gdpCoords))
+					// 	.attr("stroke", "blue")
+					// 	.attr("stroke-width",3)
+					// 	.attr("class",country.Name)
+					// 	.attr("fill", "none");
+					// 	// .attr("class",country.Name);
+
+					// //Reset for next line
+					// gdpCoords = [];
+					// console.log('new line');
+	   				
+	   	// 			//Push new coordinates
+	   	// 			gdpCoords.push({x: country.Year, y: country.GDP});
+	   	// 			prevYear = country.Year;
+	   	// 			curCountry = country.Name;
+
+	   	// 		});
 	   			
 	   			//Draw last war
 				svg.append("path")
 					.attr("d", lineFunction(gdpCoords))
 					.attr("stroke", "blue")
+					.attr("stroke-width",3)
 					.attr("fill", "none");
 			};
-
-
+			
 		</script>
 	</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
