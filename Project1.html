@@ -86,7 +86,7 @@
 			.y(function(d){
 				return yScale(d.y);
 			})
-			.interpolate("basis");
+			.interpolate("linear");
 
 			//Color scale
 			var colorGradient = d3.scale.linear().domain([1,7]).range(["blue","red"]);
