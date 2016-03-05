@@ -169,6 +169,15 @@
 					.attr("width",mapWidth);
 				var mapg = mapsvg.append("g");
 
+				// Color stuff
+				var cg = d3.scale.linear().domain([-30, 0, 30]).range(["red", 'grey', "green"]);
+				var pct = {"Thailand": 26.58647637923763,"Afghanistan": -1.431053081071107,
+					"Syria": 15.908161579867253,"Iran": -3.3335564413868877,"Sri Lanka": 
+					5.22437569483044,"Yemen, South": 0,"Georgia": -29.081622677411673,
+					"Tajikistan": -6.080166291287683, "Indonesia": 9.529024945953212, 
+					"Nepal": 6.983472982195453, 'Laos': 8.527131782945737,
+					"Cambodia": 0.45153157916375514,"Vietnam, North": 5.079365079365079};
+
 				d3.json("world-50m.json", function(error, world) {
 					worldObjects = world;
 
@@ -182,33 +191,42 @@
 							mapg.append("path").attr("d", path(country))
 							.style("fill", "#ddffdd")
 							.style("stroke", "#222");
-
-							var pirate = path(country).split(",");
-							pirate[0] = pirate[0].substring(1,pirate[0].length)
-							temp = pirate[1].split("L");
-							mapg.append("circle")
-							.attr("cx",pirate[0])
-							.attr("cy",temp[0])
-							.attr("r",cInt*2)
-							.style("fill","red");
-							//console.log(path(country));
 						}
 						else{
 							mapg.append("path").attr("d", path(country))
 							.style("fill", "#ccc")
 							.style("stroke", "#888");
 						}
-						
+					});
+					d3.json('centroids.json', function(error, coord) {
+						console.log(countryObjects);
+						coord.forEach(function(row) {
+							var cent = projection([row.LONG, row.LAT]);
+							cInt = findInt(countryObjects, row.SHORT_NAME);
+							mapg.append('circle')
+							.attr('cx', cent[0])
+							.attr('cy', cent[1])
+							.attr('r', cInt*5)
+							.style('opacity', .5)
+							.style('fill', cg(pct[row.SHORT_NAME]));
+						});
 					});
 				});
-
 			});
 
-			function findIntensity(arr,id){
-				for(var i=0;i<arr.length;i++){
-					if(arr[i].Code == id)
-						return arr[i].Intensity;
+			function findIntensity(arr, id){
+				for(var i=0; i < arr.length; i++){
+					if ( arr[i].Code == id)
+						return Math.sqrt(arr[i].Intensity);
+				}
+				return -1;
+			}
 
+			function findInt(arr, name) {
+				for (var i=0; i < arr.length; i++) {
+					if (arr[i].Name == name) {
+						return Math.sqrt(arr[i].Intensity);
+					}
 				}
 				return -1;
 			}
