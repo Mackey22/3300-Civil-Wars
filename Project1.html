@@ -71,7 +71,7 @@
 				var prevCode = civData[0].Code;
 				var prevYear = (civData[0].Year) - 1;
 				var start = civData[0].Year;
-				var cIntensities = [];
+				var countryObjects = [];
 				var avgTemp = [];
 				var repeats = [];
 				var gdp = [];
@@ -123,7 +123,7 @@
 				// console.log(gdp);
 
 				//Creates our line graph
-				drawDemLines(cIntensities);
+				drawDemLines(countryObjects);
 				
 				//Initialize map svg
 				var mapHeight = 500;
