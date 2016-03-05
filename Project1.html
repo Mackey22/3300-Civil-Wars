@@ -7,6 +7,7 @@
 
 	<body>
 		<div id = "linePlot"></div>
+		<div id = "map"></div>
 
 		<script>
 			//we did it
@@ -54,23 +55,25 @@
 			})
 			.interpolate("basis");
 
-			d3.json("cleanWars.json",function(error, json){
+			d3.json("realCleanWars.json",function(error, json){
 				civData = json;
+				var whatWeHave = [];
 				if(error){ console.log(error);}
-				var prevName = civData[0].Country;
+				var prevCode = civData[0].Code;
 				var prevYear = (civData[0].Year) - 1;
 				var cIntensities = [];
 				var avgTemp = [];
 				var repeats = [];
 				civData.forEach(function(country){
-					if((country.Country != prevName) || Math.abs(country.Year-prevYear) > 1) {
+					whatWeHave.push(country.Code);
+					if((country.Code != prevCode) || Math.abs(country.Year-prevYear) > 1) {
 
-						if( (prevName in repeats && avg(avgTemp) > cIntensities[repeats.indexOf(prevName)]["avg"]) ){
-							cIntensities[prevName] = avg(avgTemp);
+						/*if( (prevCode in repeats && avg(avgTemp) > cIntensities[repeats.indexOf(prevCode)]["avg"]) ){
+							cIntensities[prevCode] = avg(avgTemp);
 							console.log("houston we have a problem");
-						}else if(!(repeats.contains(prevName))){
-							repeats.push(prevName);
-							cIntensities.push({Name:prevName, Avg:avg(avgTemp)});
+						}else */if(!(repeats.contains(prevCode))){
+							repeats.push(prevCode);
+							cIntensities.push({Name:prevCode, Avg:avg(avgTemp)});
 							//console.log(cIntensities[repeats.indexOf(country.Country)]["avg"]);
 						}else{
 							//console.log("This should show up");
@@ -80,13 +83,67 @@
 
 					}
 					avgTemp.push(country.Intensity);
-					prevName = country.Country;
+					prevCode = country.Code;
 					prevYear = country.Year;
-					// if(prevName == "Indonesia"){
+					// if(prevCode == "Indonesia"){
 					// 	console.log(country.Intensity);
 					// };
 				});
-				// console.log(cIntensities);
+				cIntensities.push({Name:prevCode,Avg:avg(avgTemp)});
+				//console.log(prevCode);
+				console.log(cIntensities);
+
+				
+				var mapHeight = 500;
+				var mapWidth = 960;
+
+				var projection = d3.geo.equirectangular()
+					.center([28,50])
+				    .scale(450)
+				    .translate([0,0])
+				    .precision(.1);
+
+				var path = d3.geo.path().projection(projection);
+
+				var mapsvg = d3.select("#map").append("svg").attr("height",mapHeight)
+					.attr("width",mapWidth);
+				var mapg = mapsvg.append("g");
+
+				d3.json("world-50m.json", function(error, world) {
+					worldObjects = world;
+
+					var countries = topojson.feature(world, world.objects.countries).features;
+		
+					// convert each country's data into a path element.
+					countries.forEach(function (country) {
+						
+						if(whatWeHave.contains(country.id)){
+							cInt = findIntensity(cIntensities,country.id);
+							mapg.append("path").attr("d", path(country))
+							.style("fill", "#ddffdd")
+							.style("stroke", "#222");
+
+							var pirate = path(country).split(",");
+							pirate[0] = pirate[0].substring(1,pirate[0].length)
+							temp = pirate[1].split("L");
+							mapg.append("circle")
+							.attr("cx",pirate[0])
+							.attr("cy",temp[0])
+							.attr("r",cInt*2)
+							.style("fill","red");
+							//console.log(path(country));
+						}
+						else{
+							mapg.append("path").attr("d", path(country))
+							.style("fill", "#ccc")
+							.style("stroke", "#888");
+						}
+						
+					});
+				});
+
+
+
 			});
 			
 			d3.json("cleanGdp.json",function(error, json){
@@ -96,11 +153,21 @@
 				gdpData.forEach(function(country){
 
 					gdp.push({Name:country.Country, Year: parseInt(country.Year), GDP: country.GDP, Code: country.Code });
-				});
 
+				});
+				console.log(gdp);
 				drawDemLines(gdp);
 
 			});
+
+			function findIntensity(arr,id){
+				for(var i=0;i<arr.length;i++){
+					if(arr[i].Name == id)
+						return arr[i].Avg;
+
+				}
+				return -1;
+			}
 
    			function drawDemLines(gdp){
 	   			gdpCoords = [];

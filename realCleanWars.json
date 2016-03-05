@@ -2,6 +2,69 @@
   {
     "Code": 116,
     "Country": "Cambodia",
+    "Intensity": 5,
+    "GDP": 102.3045029,
+    "Year": 1970
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 5,
+    "GDP": 135.3166668,
+    "Year": 1971
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 5,
+    "GDP": 68.9589809,
+    "Year": 1972
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 5,
+    "GDP": 93.99376256,
+    "Year": 1973
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 5,
+    "GDP": 77.82019898,
+    "Year": 1974
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 6,
+    "GDP": 0,
+    "Year": 1975
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 6,
+    "GDP": 0,
+    "Year": 1976
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 6,
+    "GDP": 0,
+    "Year": 1977
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
+    "Intensity": 6,
+    "GDP": 0,
+    "Year": 1978
+  },
+  {
+    "Code": 116,
+    "Country": "Cambodia",
     "Intensity": 2,
     "GDP": 0,
     "Year": 1990
@@ -616,41 +679,6 @@
     "Year": 1990
   },
   {
-    "Code": 116,
-    "Country": "Cambodia",
-    "Intensity": 5,
-    "GDP": 102.3045029,
-    "Year": 1970
-  },
-  {
-    "Code": 116,
-    "Country": "Cambodia",
-    "Intensity": 5,
-    "GDP": 135.3166668,
-    "Year": 1971
-  },
-  {
-    "Code": 116,
-    "Country": "Cambodia",
-    "Intensity": 5,
-    "GDP": 68.9589809,
-    "Year": 1972
-  },
-  {
-    "Code": 116,
-    "Country": "Cambodia",
-    "Intensity": 5,
-    "GDP": 93.99376256,
-    "Year": 1973
-  },
-  {
-    "Code": 116,
-    "Country": "Cambodia",
-    "Intensity": 5,
-    "GDP": 77.82019898,
-    "Year": 1974
-  },
-  {
     "Code": 360,
     "Country": "Indonesia",
     "Intensity": 5,
@@ -782,34 +810,6 @@
     "Intensity": 5,
     "GDP": 740.9177479,
     "Year": 1992
-  },
-  {
-    "Code": 116,
-    "Country": "Cambodia",
-    "Intensity": 6,
-    "GDP": 0,
-    "Year": 1975
-  },
-  {
-    "Code": 116,
-    "Country": "Cambodia",
-    "Intensity": 6,
-    "GDP": 0,
-    "Year": 1976
-  },
-  {
-    "Code": 116,
-    "Country": "Cambodia",
-    "Intensity": 6,
-    "GDP": 0,
-    "Year": 1977
-  },
-  {
-    "Code": 116,
-    "Country": "Cambodia",
-    "Intensity": 6,
-    "GDP": 0,
-    "Year": 1978
   },
   {
     "Code": 408,
