@@ -23,15 +23,71 @@
 			.tick line{
 				opacity: 0.2;
 			}
+			#lGraph_Title {
+				font-size: 28px;
+				font-family: "Futura";
+			}
+			.axisLabel {
+				font-size: 20px;
+				font-family: "Futura";
+			}
+			#legendBox{
+				position: absolute;
+				background-color: white;
+				border: 1px solid black;
+				text-align: center;
+				width: 250px;
+				height: 100px;
+				top: 150;
+				left: 900;
+			}
+			#legendBox h4{
+				margin: 5%;
+			}
+			#legendBox p{
+				margin:0;
+			}
+			#colorVal1{
+				display: inline-block;
+				padding-right: 36%;
+				
+			}
+			#colorVal2{
+				display: inline-block;
+				padding-left: 36%;
+				
+			}
+			#colorLegend{
+				width: 80%;
+				margin-left: 10%;
+				margin-right: 10%;
+				height: 10%;
+				margin-bottom: 2%;
+				background-color:#2D09E0;
+				background-image:-moz-linear-gradient(left, #2D09E0 0%, #3C27CD 16.67%, #4B46BA 33.33%, #5B65A8 50%, #914370 66.67%, #C82138 83.33%, #FF0000 100%);
+				background-image:linear-gradient(left, #2D09E0 0%, #3C27CD 16.67%, #4B46BA 33.33%, #5B65A8 50%, #914370 66.67%, #C82138 83.33%, #FF0000 100%);
+				background-image:-webkit-linear-gradient(left, #2D09E0 0%, #3C27CD 16.67%, #4B46BA 33.33%, #5B65A8 50%, #914370 66.67%, #C82138 83.33%, #FF0000 100%);
+				background-image:-o-linear-gradient(left, #2D09E0 0%, #3C27CD 16.67%, #4B46BA 33.33%, #5B65A8 50%, #914370 66.67%, #C82138 83.33%, #FF0000 100%);
+				background-image:-ms-linear-gradient(left, #2D09E0 0%, #3C27CD 16.67%, #4B46BA 33.33%, #5B65A8 50%, #914370 66.67%, #C82138 83.33%, #FF0000 100%);
+				
+			}
 
 		</style>
 	</head>
 
 	<body>
-		<div id = "linePlot"></div>
+		<div id = "linePlot">
+			<div id = "legendBox">
+				<h4> Key </h4>
+				<p> Color: Intensity of the War</p>
+				<div id = "colorLegend"></div>
+				<p id = 'colorVal1'>1</p> 
+				<p id = 'colorVal2'>7</p>
+			</div>
+		</div>
 		<br><br><br><br><br><br><br>
 		<div id = "map"></div>
-
+		
 		<script>
 			//Needed for intensity average
 			function avg(l){
@@ -52,24 +108,24 @@
 			//Svg initializations
 			var height = 800;
 			var width = 1300;
-			padding = 70;
+			padding = 80;
 			var svg = d3.select("#linePlot").append("svg").attr("width",width)
-				.attr("height",height);
+				.attr("height",height).style("border","1px solid black");
 				
 			//20px margin
 			var g = svg.append("g");
 
 			//Create our line graph scale and axes
-			var xScale = d3.scale.linear().domain([1960,2014]).range([padding,width-padding]);
+			var xScale = d3.scale.linear().domain([1960,2014]).range([1.25*padding,width-padding]);
 			var yScale = d3.scale.linear().domain([0, 4300]).range([height-padding,padding]);
 
 			var xAxis = d3.svg.axis().scale(xScale).orient("bottom").innerTickSize(-height +2*padding).outerTickSize(0).tickPadding(10).tickFormat(d3.format('f%'));
-			var yAxis = d3.svg.axis().scale(yScale).orient("left").innerTickSize(-width+ 2*padding).outerTickSize(0).tickPadding(10);
+			var yAxis = d3.svg.axis().scale(yScale).orient("left").innerTickSize(-width+ 2.25*padding).outerTickSize(0).tickPadding(10);
 
 			svg.append("rect")
-				.attr("x",padding)
+				.attr("x",1.25*padding)
 				.attr("y",padding)
-				.attr("width",width-(2*padding))
+				.attr("width",width-(2.25*padding))
 				.attr("height",height - (2*padding))
 				.attr("fill","#d9d9d9");
 
@@ -77,8 +133,31 @@
 				.attr("transform", "translate(0," + (height-padding) + ")").call(xAxis);
 
 			svg.append("g").attr("class","axis")
-				.attr("transform","translate(" + padding + ",0)").call(yAxis);
+				.attr("transform","translate(" + 1.25*padding + ",0)").call(yAxis);
 
+
+			//Title
+			svg.append("text")
+				.attr('x', width/2)
+				.attr('y', 50)
+				.attr('text-anchor', 'middle')
+				.attr('id','lGraph_Title')
+				.text("GDP in Countries Experiencing Civil War")
+
+			//Axes Labels
+			svg.append("text")
+				.attr('transform','rotate(-90)')
+				.attr('x', -400)
+				.attr('y',35)
+				.attr('text-anchor', 'middle')
+				.attr('class','axisLabel')
+				.text("GDP per Capita");
+			svg.append("text")
+				.attr('x', width/2)
+				.attr('y', height-25)
+				.attr('text-anchor', 'middle')
+				.attr('class','axisLabel')
+				.text("Time In Years");
 
 			//Create a line function for gdp over time
 			var lineFunction = d3.svg.line().x(function(d){
@@ -90,7 +169,8 @@
 			.interpolate("linear");
 
 			//Color scale
-			var colorGradient = d3.scale.linear().domain([1,7]).range(["blue","red"]);
+			var col_gradient = ["#2D09E0", "#3C27CD", "#4B46BA", "#5B65A8", "#914370", "#C82138", "#FF0000"]
+			var colorGradient = d3.scale.ordinal().domain([1,7]).range(col_gradient);
 
 			//Let's look at our data and make some graphs!
 			d3.json("realCleanWars.json",function(error, json){
@@ -206,9 +286,8 @@
 
 			function findIntensity(arr,id){
 				for(var i=0;i<arr.length;i++){
-					if(arr[i].Code == id)
-						return arr[i].Intensity;
-
+					if(arr[i].Name == id)
+						return arr[i].Avg;
 				}
 				return -1;
 			}
@@ -228,10 +307,7 @@
 						.attr("stroke-width",3)
 						.attr("fill", "none")
 						.attr("class",country.Name);
-					console.log(country.Name);
 	   			})
-
-	   			//Labels and corresponding locations
 	   			xText = [1966,1979,1980.5,1979,1986.5, 1985.5,1992.25,1993,2001,1975,1965.25];
 	   			yText = [210,320,1400,2500,480,100,800,320,300, 120,50];
 	   			countries = ["Thailand","Afghanistan","Syria","Iran","Sri Lanka","Yemen","Georgia","Tajikistan","Nepal","Cambodia","North Vietnam",]
@@ -241,6 +317,7 @@
 	   				.attr("x", xScale(xText[i]))
 	   				.attr("y", yScale(yText[i]))
 	   				.text(countries[i])
+	   				.style("font-size","14px");
 	   			}
 
 			};
