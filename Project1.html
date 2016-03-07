@@ -269,13 +269,13 @@
 						if(whatWeHave.contains(country.id)){
 							cInt = findIntensity(countryObjects,country.id);
 							mapg.append("path").attr("d", path(country))
-							.style("fill", "#ddffdd")
+							.style("fill", "#ffffcc")
 							.style("stroke", "#222");
 						}
 						else{
 							mapg.append("path").attr("d", path(country))
-							.style("fill", "#ccc")
-							.style("stroke", "#888");
+							.style("fill", "#dcdcdc")
+							.style("stroke", "#222");
 						}
 					});
 					d3.json('centroids.json', function(error, coord) {
@@ -286,8 +286,8 @@
 							mapg.append('circle')
 							.attr('cx', cent[0])
 							.attr('cy', cent[1])
-							.attr('r', cInt*5)
-							.style('opacity', .5)
+							.attr('r', cInt*10)
+							.style('opacity', .75)
 							.style('fill', cg(pct[row.SHORT_NAME]));
 						});
 					});
