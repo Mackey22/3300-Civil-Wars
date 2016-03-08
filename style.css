@@ -1,0 +1,161 @@
+a{
+	color:blue;
+}
+body{
+	margin: 0;
+}
+#header{
+	width: 100%;
+	height: 150px;
+	text-align: center;
+	font-family: Futura;
+	font-size: 36px;
+}
+
+.axis path,
+.axis line{
+	fill: none;
+	stroke: black;
+}
+
+.line{
+	fill: none;
+	stroke: blue;
+	stroke-width: 5px;
+}
+
+.tick text{
+	font-size: 12px;
+}	
+.tick line{
+	opacity: 0.2;
+}
+p{
+	font-family: Futura;
+}
+.Title {
+	font-size: 28px;
+	font-family: "Futura";
+	alignment-baseline: middle;
+	text-anchor: middle;
+}
+.axisLabel {
+	font-size: 20px;
+	font-family: "Futura";
+}
+.lineGraph_countries{
+	font-size: 12px;
+	font-family: "Futura";
+}
+#lineSVG, #mapSVG, #circlesSVG{
+	margin: auto;
+	display: block;
+	border: solid 1px black;
+	background-color: white;
+	margin-bottom: 5em;
+}
+#bibliography{
+	display: block;
+	margin: auto;
+	width: 50%;
+	text-align: center;
+}
+#lineLegendBox, #mapLegendBox{
+	position: absolute;
+	background-color: white;
+	border: 1px solid black;
+	text-align: center;
+	width: 250px;
+	height: 100px;
+}
+#lineLegendBox{
+	top: 262px;
+    left: 903px;
+}
+#mapLegendBox{
+	top: 890px;
+    left: 916px;
+    width: 340px;
+    height: 130px;
+}
+#lineLegendBox h4{
+	margin: 5%;
+}
+#mapLegendBox h4{
+	margin: 1%;
+}
+#lineLegendBox p, #mapLegendBox p{
+	margin:0;
+	margin-bottom: 2%;
+	
+}
+#colorVal1{
+	display: inline-block;
+	padding-right: 36%;
+	font-size: 14px;
+	
+}
+#colorVal2{
+	display: inline-block;
+	padding-left: 36%;
+	font-size: 14px;
+	
+}
+.mapColorVal1,.mapColorVal2, .mapColorValMid{
+	display: inline-block;
+	font-size: 14px;
+}
+#lineLegend, #mapColorLegend, #circleLegend{
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	height: 10%;
+	margin-bottom: 1%;
+}
+#lineLegend{
+	background-color:#2D09E0;
+	background-image:-moz-linear-gradient(left, #2D09E0 0%, #3C27CD 16.67%, #4B46BA 33.33%, #5B65A8 50%, #914370 66.67%, #C82138 83.33%, #FF0000 100%);
+	background-image:linear-gradient(left, #2D09E0 0%, #3C27CD 16.67%, #4B46BA 33.33%, #5B65A8 50%, #914370 66.67%, #C82138 83.33%, #FF0000 100%);
+	background-image:-webkit-linear-gradient(left, #2D09E0 0%, #3C27CD 16.67%, #4B46BA 33.33%, #5B65A8 50%, #914370 66.67%, #C82138 83.33%, #FF0000 100%);
+	background-image:-o-linear-gradient(left, #2D09E0 0%, #3C27CD 16.67%, #4B46BA 33.33%, #5B65A8 50%, #914370 66.67%, #C82138 83.33%, #FF0000 100%);
+	background-image:-ms-linear-gradient(left, #2D09E0 0%, #3C27CD 16.67%, #4B46BA 33.33%, #5B65A8 50%, #914370 66.67%, #C82138 83.33%, #FF0000 100%);
+
+}
+#mapColorLegend, #circleLegend{
+	background-color:#2D09E0;
+	background-image:-moz-linear-gradient(left, red 0%, gray 50%, green 100%);
+	background-image:linear-gradient(left, red 0%, gray 50%, green 100%);
+	background-image:-webkit-linear-gradient(left, red 0%, gray 50%, green 100%);
+	background-image:-o-linear-gradient(left, red 0%, gray 50%, green 100%);
+	background-image:-ms-linear-gradient(left, red 0%, gray 50%, green 100%);
+	opacity: .75;
+}
+#circleLegend{
+	position: absolute;
+	width: 850px;
+	height: 25px;
+	top: 1738;
+	left: 390;
+	margin: 0;
+}
+.circleComp_text, .circleScaleText{
+	alignment-baseline: middle;
+	text-anchor: middle;
+	font-size: .8em;
+	font-family: Futura;
+}
+.circleScaleText{
+	font-size: 1em;
+}
+
+#colorVal3{
+	display: inline-block;
+	padding-right: 36%;
+}
+#colorVal4{
+	display: inline-block;
+	padding-left: 36%;
+}
+#lGraph_title{
+	font-family: Futura;
+}
