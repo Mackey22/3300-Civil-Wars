@@ -4,7 +4,9 @@
 		<script src="http://d3js.org/topojson.v1.min.js"></script>
 		<title>Civil Wars and GDP</title>
 		<style>
-			
+			a{
+				color:blue;
+			}
 			.axis path,
 			.axis line{
 				fill: none;
@@ -88,6 +90,15 @@
 		<br><br><br><br><br><br><br>
 		<div id = "map"></div>
 		
+		<div id = "bibliography">
+			<h3>Works Cited</h3>
+			<p>
+				<b>Gothos</b> - A Geospatial Librarian's World: <a href=http://gothos.info/2009/02/centroids-for-countries>Link</a><br>
+				<b>UN data</b> - A World of Information: <a href=http://data.un.org/Data.aspx?q=per+capita+gdp&d=SNAAMA&f=grID%3a101%3bcurrID%3aUSD%3bpcFlag%3a1>Link</a><br>
+				<b>World Bank Data</b> - Working for a World Free of Poverty: <a href=http://data.worldbank.org/indicator/NY.GDP.PCAP.CD>Link</a><br>
+				<b>PRIO</b> - Peace Research Institute in Oslo - Data on Armed Conflict: <a href=http://data.worldbank.org/indicator/NY.GDP.PCAP.CD>Link </a><br>
+			</p>
+		</div>
 		<script>
 			//Needed for intensity average
 			function avg(l){
@@ -190,7 +201,8 @@
 				var yearsTemp = [];
 
 				civData.forEach(function(country){
-					whatWeHave.push(country.Code);
+					if(country.Code != 418 && country.Code != 360 && country.Code != 408 && country.Code != 410)
+						whatWeHave.push(country.Code);
 
 					//Checks to see if we've moved on to a new country
 					if((country.Code != prevCode) || Math.abs(country.Year-prevYear) > 1) {
@@ -269,26 +281,76 @@
 						if(whatWeHave.contains(country.id)){
 							cInt = findIntensity(countryObjects,country.id);
 							mapg.append("path").attr("d", path(country))
-							.style("fill", "#ddffdd")
+							.style("fill", "#ffffcc")
 							.style("stroke", "#222");
 						}
 						else{
 							mapg.append("path").attr("d", path(country))
-							.style("fill", "#ccc")
-							.style("stroke", "#888");
+							.style("fill", "#dcdcdc")
+							.style("stroke", "#222");
 						}
 					});
 					d3.json('centroids.json', function(error, coord) {
 						console.log(countryObjects);
 						coord.forEach(function(row) {
-							var cent = projection([row.LONG, row.LAT]);
+							var longitude = row.LONG;
+							var lattitude = row.LAT;
+							if(row.SHORT_NAME == "Vietnam, North"){
+								longitude -= 2.5;
+								lattitude += 3.5;
+							}
+							var cent = projection([longitude, lattitude]);
 							cInt = findInt(countryObjects, row.SHORT_NAME);
-							mapg.append('circle')
-							.attr('cx', cent[0])
-							.attr('cy', cent[1])
-							.attr('r', cInt*5)
-							.style('opacity', .5)
-							.style('fill', cg(pct[row.SHORT_NAME]));
+
+							if(row.SHORT_NAME != "Korea North" &&
+								row.SHORT_NAME != "Korea South" &&
+								row.SHORT_NAME != "Laos" &&
+								row.SHORT_NAME != "Indonesia"){
+
+								mapg.append('circle')
+								.attr('cx', cent[0])
+								.attr('cy', cent[1])
+								.attr('r', cInt*11)
+								.style('opacity', .75)
+								.style('fill', cg(pct[row.SHORT_NAME]));
+
+
+								if(row.SHORT_NAME == "Vietnam, North"){
+									mapg.append('text')
+									.attr('x',cent[0])
+									.attr('y',cent[1])
+									.text("Vietnam")
+									.style('alignment-baseline','middle')
+									.style('text-anchor','middle')
+									.style('font-size','.8em')
+									.style('font-family','Futura');
+									console.log(row.SHORT_NAME);
+								}
+								else if(row.SHORT_NAME == "Yemen, South"){
+									
+									mapg.append('text')
+									.attr('x',cent[0])
+									.attr('y',cent[1])
+									.text("Yemen")
+									.style('alignment-baseline','middle')
+									.style('text-anchor','middle')
+									.style('font-size','.8em')
+									.style('font-family','Futura');
+									console.log(row.SHORT_NAME);
+								}
+								else{
+									mapg.append('text')
+									.attr('x',cent[0])
+									.attr('y',cent[1])
+									.text(row.SHORT_NAME)
+									.style('alignment-baseline','middle')
+									.style('text-anchor','middle')
+									.style('font-size','.8em')
+									.style('font-family','Futura');
+									console.log(row.SHORT_NAME);
+								}
+							}
+							
 						});
 					});
 				});
