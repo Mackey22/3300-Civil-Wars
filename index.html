@@ -252,6 +252,9 @@
 						}
 					});
 
+
+					// Size of radius
+					var rVal = 11;
 					//Add centroids to relevant countries for data representation
 					d3.json('centroids.json', function(error, coord) {
 						// console.log(countryObjects);
@@ -274,8 +277,8 @@
 								mapg.append('circle')
 								.attr('cx', cent[0])
 								.attr('cy', cent[1])
-								.attr('r', cInt*11)
-								.style('opacity', .75)
+								.attr('r', cInt*rVal)
+								.style('opacity', .85)
 								.style('fill', cg(pct[row.SHORT_NAME]));
 
 								if(row.SHORT_NAME == "Vietnam, North"){
@@ -285,7 +288,7 @@
 									.attr('class','circleComp_text')
 									.text("Vietnam");
 									// console.log(row.SHORT_NAME);
-									centroidObjects.push({Name: "Vietnam", Intensity: cInt*11, Delta: pct[row.SHORT_NAME], x: cent[0], y: cent[1]})
+									centroidObjects.push({Name: "Vietnam", Intensity: cInt*rVal, Delta: pct[row.SHORT_NAME], x: cent[0], y: cent[1]})
 								}
 								else if(row.SHORT_NAME == "Yemen, South"){
 									
@@ -295,7 +298,7 @@
 									.attr('class','circleComp_text')
 									.text("Yemen");
 									// console.log(row.SHORT_NAME);
-									centroidObjects.push({Name: "Yemen", Intensity: cInt*11, Delta: pct[row.SHORT_NAME], x: cent[0], y: cent[1]})
+									centroidObjects.push({Name: "Yemen", Intensity: cInt*rVal, Delta: pct[row.SHORT_NAME], x: cent[0], y: cent[1]})
 								}
 								else{
 									mapg.append('text')
@@ -304,7 +307,7 @@
 									.attr('class','circleComp_text')
 									.text(row.SHORT_NAME);
 									// console.log(row.SHORT_NAME);
-									centroidObjects.push({Name:row.SHORT_NAME , Intensity: cInt*11, Delta: pct[row.SHORT_NAME], x: cent[0], y: cent[1]})
+									centroidObjects.push({Name:row.SHORT_NAME , Intensity: cInt*rVal, Delta: pct[row.SHORT_NAME], x: cent[0], y: cent[1]})
 								}
 
 							}
@@ -413,7 +416,7 @@
 					var start = 30;
 					var nScale = d3.scale.sqrt()
 						.domain([0, 8])
-						.range([start, start + Math.sqrt(8) * 20]);
+						.range([start, start + Math.sqrt(8) * 2 * rVal]);
 					var nAxis = d3.svg.axis()
 						.scale(nScale)
 						.orient("bottom")
