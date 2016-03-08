@@ -170,7 +170,7 @@
 
 			//Color scale
 			var col_gradient = ["#2D09E0", "#3C27CD", "#4B46BA", "#5B65A8", "#914370", "#C82138", "#FF0000"]
-			var colorGradient = d3.scale.ordinal().domain([1,7]).range(col_gradient);
+			var colorGradient = d3.scale.ordinal().domain([1,2,3,4,5,6,7]).range(col_gradient);
 
 			//Let's look at our data and make some graphs!
 			d3.json("realCleanWars.json",function(error, json){
@@ -329,7 +329,7 @@
 	   			})
 	   			xText = [1966,1979,1980.5,1979,1986.5, 1985.5,1992.25,1993,2001,1975,1965.25];
 	   			yText = [210,320,1400,2500,480,100,800,320,300, 120,50];
-	   			countries = ["Thailand","Afghanistan","Syria","Iran","Sri Lanka","Yemen","Georgia","Tajikistan","Nepal","Cambodia","North Vietnam",]
+	   			countries = ["Thailand","Afghanistan","Syria","Iran","Sri Lanka","Yemen","Georgia","Tajikistan","Nepal","Cambodia","Vietnam",]
 
 	   			for(var i = 0; i<xText.length; i++){
 	   				svg.append("text")
