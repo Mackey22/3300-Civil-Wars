@@ -71,9 +71,45 @@
 				background-image:-webkit-linear-gradient(left, #2D09E0 0%, #3C27CD 16.67%, #4B46BA 33.33%, #5B65A8 50%, #914370 66.67%, #C82138 83.33%, #FF0000 100%);
 				background-image:-o-linear-gradient(left, #2D09E0 0%, #3C27CD 16.67%, #4B46BA 33.33%, #5B65A8 50%, #914370 66.67%, #C82138 83.33%, #FF0000 100%);
 				background-image:-ms-linear-gradient(left, #2D09E0 0%, #3C27CD 16.67%, #4B46BA 33.33%, #5B65A8 50%, #914370 66.67%, #C82138 83.33%, #FF0000 100%);
-				
 			}
 
+			#mapLegend{
+				position: absolute;
+				background-color: white;
+				border: 1px solid black;
+				text-align: center;
+				width: 320px;
+				height: 130px;
+				top: 1305;
+				left: 200;
+			}
+			#mapLegend h4{
+				margin: 1%;
+			}
+			#mapLegend p{
+				margin:0;
+			}
+			#colorVal3{
+				display: inline-block;
+				padding-right: 36%;
+			}
+			#colorVal4{
+				display: inline-block;
+				padding-left: 36%;
+			}
+			#mapColorLegend{
+				width: 80%;
+				margin-left: 10%;
+				margin-right: 10%;
+				height: 10%;
+				margin-bottom: 0%;
+				background-color:#2D09E0;
+				background-image:-moz-linear-gradient(left, red 0%, gray 50%, green 100%);
+				background-image:linear-gradient(left, red 0%, gray 50%, green 100%);
+				background-image:-webkit-linear-gradient(left, red 0%, gray 50%, green 100%);
+				background-image:-o-linear-gradient(left, red 0%, gray 50%, green 100%);
+				background-image:-ms-linear-gradient(left, red 0%, gray 50%, green 100%);
+			}
 		</style>
 	</head>
 
@@ -88,8 +124,17 @@
 			</div>
 		</div>
 		<br><br><br><br><br><br><br>
-		<div id = "map"></div>
-		
+		<div id = "map">
+			<div id='mapLegend'>
+				<h4>Key</h4>
+				<p> <b>Color:</b> Avg. % Change in GDP/Cap. per year</p>
+				<div id='mapColorLegend'></div>
+				<p id='colorVal3'>-30%</p>
+				<p id='colorVal4'>30%</p>
+				<p><b>Diameter:</b> Intensity of the War</p>
+				<div id='mapDistLegend'></div>
+			</div>
+		</div>		
 		<div id = "bibliography">
 			<h3>Works Cited</h3>
 			<p>
@@ -258,7 +303,7 @@
 				var path = d3.geo.path().projection(projection);
 
 				var mapsvg = d3.select("#map").append("svg").attr("height",mapHeight)
-					.attr("width",mapWidth);
+					.attr("width",mapWidth).style("border","1px solid black");
 				var mapg = mapsvg.append("g");
 
 				// Color stuff
@@ -353,6 +398,38 @@
 							
 						});
 					});
+
+
+					mapg.append('rect')
+						.attr('x', 0)
+						.attr('width', mapWidth)
+						.attr('y', 0)
+						.attr('height', 50)
+						.attr('fill', 'black')
+						.attr('opacity', 0.8);
+					// Title
+					mapg.append("text")
+						.attr('x', mapWidth/2)
+						.attr('y', 32)
+						.attr('text-anchor', 'middle')
+						.attr('id','lGraph_Title')
+						.attr('fill', 'white')
+						.text("Change in GDP per Capita and Civil War Intensity");
+
+					// Key Distance axis
+					var key = d3.select("#mapLegend").append("svg").attr("width", '100%')
+						.attr("height","25");
+					var start = 30;
+					var nScale = d3.scale.sqrt()
+						.domain([0, 8])
+						.range([start, start + Math.sqrt(8) * 20]);
+					var nAxis = d3.svg.axis()
+						.scale(nScale)
+						.orient("bottom")
+						.ticks(4);
+					key.append("g").attr("class", "axis")
+						.attr("transform", "translate(100,5)")
+						.call(nAxis);
 				});
 			});
 
@@ -389,9 +466,9 @@
 						.attr("fill", "none")
 						.attr("class",country.Name);
 	   			})
-	   			xText = [1966,1979,1980.5,1979,1986.5, 1985.5,1992.25,1993,2001,1975,1965.25];
-	   			yText = [210,320,1400,2500,480,100,800,320,300, 120,50];
-	   			countries = ["Thailand","Afghanistan","Syria","Iran","Sri Lanka","Yemen","Georgia","Tajikistan","Nepal","Cambodia","North Vietnam",]
+	   			xText = [1966,1979,1980.5,1979,1986.5, 1985.5,1992.25,1993,2001,1975,1967.5];
+	   			yText = [210,320,1400,2500,480,100,800,320,300, 120,40];
+	   			countries = ["Thailand","Afghanistan","Syria","Iran","Sri Lanka","Yemen","Georgia","Tajikistan","Nepal","Cambodia","Vietnam",]
 
 	   			for(var i = 0; i<xText.length; i++){
 	   				svg.append("text")
