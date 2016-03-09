@@ -64,7 +64,6 @@
 				}
 				return false;
 			};
-
 			//Svg initializations
 			var height = 600;
 			var width = 960;
@@ -74,27 +73,21 @@
 				
 			//20px margin
 			var g = svg.append("g");
-
 			//Create our line graph scale and axes
 			var xScale = d3.scale.linear().domain([1960,2014]).range([1.25*padding,width-padding]);
 			var yScale = d3.scale.linear().domain([0, 4300]).range([height-padding,padding]);
-
 			var xAxis = d3.svg.axis().scale(xScale).orient("bottom").innerTickSize(-height +2*padding).outerTickSize(0).tickPadding(10).tickFormat(d3.format('f%'));
 			var yAxis = d3.svg.axis().scale(yScale).orient("left").innerTickSize(-width+ 2.25*padding).outerTickSize(0).tickPadding(10);
-
 			svg.append("rect")
 				.attr("x",1.25*padding)
 				.attr("y",padding)
 				.attr("width",width-(2.25*padding))
 				.attr("height",height - (2*padding))
 				.attr("fill","#d9d9d9");
-
 			svg.append("g").attr("class", "axis")
 				.attr("transform", "translate(0," + (height-padding) + ")").call(xAxis);
-
 			svg.append("g").attr("class","axis")
 				.attr("transform","translate(" + 1.25*padding + ",0)").call(yAxis);
-
 			//Title
 			svg.append("text")
 				.attr('x', width/2)
@@ -102,7 +95,6 @@
 				.attr('text-anchor', 'middle')
 				.attr('class','Title')
 				.text("GDP in Countries Experiencing Civil War")
-
 			//Axes Labels
 			svg.append("text")
 				.attr('transform','rotate(-90)')
@@ -117,7 +109,6 @@
 				.attr('text-anchor', 'middle')
 				.attr('class','axisLabel')
 				.text("Time In Years");
-
 			//Create a line function for gdp over time
 			var lineFunction = d3.svg.line().x(function(d){
 				return xScale(d.x);
@@ -126,17 +117,14 @@
 				return yScale(d.y);
 			})
 			.interpolate("linear");
-
 			//Color scale
 			var col_gradient = ["#2D09E0", "#3C27CD", "#4B46BA", "#5B65A8", "#914370", "#C82138", "#FF0000"]
 			var colorGradient = d3.scale.ordinal().domain([1,2,3,4,5,6,7]).range(col_gradient);
-
 			//Let's look at our data and make some graphs!
 			d3.json("realCleanWars.json",function(error, json){
 				civData = json;
 				var whatWeHave = [];
 				if(error){ console.log(error);}
-
 				//Initializations for data manipulation
 				var prevCode = civData[0].Code;
 				var prevYear = (civData[0].Year) - 1;
@@ -147,32 +135,24 @@
 				var gdp = [];
 				var gdpTemp = [];
 				var yearsTemp = [];
-
 				civData.forEach(function(country){
 					if(country.Code != 418 && country.Code != 360 && country.Code != 408 && country.Code != 410)
 						whatWeHave.push(country.Code);
-
 					//Checks to see if we've moved on to a new country
 					if((country.Code != prevCode) || Math.abs(country.Year-prevYear) > 1) {
-
 						//Edge case in case there's another a country with multiple wars only take one
 						if( (prevName in repeats && avg(avgTemp) > countryObjects[repeats.indexOf(prevName)].Intensity) ){
 							countryObjects[repeats.indexOf(prevName)].Intensity = avg(avgTemp);
-
 						}else if(!(repeats.contains(prevName))){ //Add country object
 							repeats.push(prevName);
 							countryObjects.push({Name:prevName, Intensity: avg(avgTemp), Years: yearsTemp, GDP: gdpTemp, Code: prevCode});
 						}
-
 						avgTemp = [];
 						gdpTemp = [];
 						start = country.Year;
 						yearsTemp = [];
-
 					}
-
 					avgTemp.push(country.Intensity);
-
 					//Only want countries with GDP data
 					if(country.GDP != 0){
 						yearsTemp.push(country.Year)
@@ -189,38 +169,30 @@
 				countryObjects[repeats.indexOf('Afghanistan')].GDP.pop();
 				countryObjects[repeats.indexOf('Afghanistan')].Years.pop();
 				countryObjects[repeats.indexOf('Laos')].GDP = [];
-
 				//Creates our line graph
 				drawDemLines(countryObjects);
 				
 				//Initialize map svg
 				var mapHeight = 500;
 				var mapWidth = 960;
-
 				//Find specific part of world map
 				var projection = d3.geo.equirectangular()
 					.center([28,50])
 				    .scale(450)
 				    .translate([0,0])
 				    .precision(.1);
-
 				var path = d3.geo.path().projection(projection);
-
 				var mapsvg = d3.select("#map").append("svg")
 					.attr("height",mapHeight)
 					.attr("width",mapWidth)
 					.attr('id','mapSVG')
 					.attr("stroke","1px solid black");
-
 				var mapg = mapsvg.append("g");
-
 				var circles_svg = d3.select("#circlesComp").append('svg')
 					.attr("height",425)
 					.attr("width",mapWidth)
 					.attr("id","circlesSVG");
 				var circlesG = circles_svg.append("g");
-
-
 				// Color stuff
 				var cg = d3.scale.linear().domain([-30, 0, 30]).range(["red", 'grey', "green"]);
 				var pct = {"Thailand": 26.58647637923763,"Afghanistan": -1.431053081071107,
@@ -229,11 +201,9 @@
 					"Tajikistan": -6.080166291287683, "Indonesia": 9.529024945953212, 
 					"Nepal": 6.983472982195453, 'Laos': 8.527131782945737,
 					"Cambodia": 0.45153157916375514,"Vietnam, North": 5.079365079365079};
-
 				//Read world map
 				d3.json("world-50m.json", function(error, world) {
 					worldObjects = world;
-
 					var countries = topojson.feature(world, world.objects.countries).features;
 		
 					// convert each country's data into a path element.
@@ -251,10 +221,6 @@
 							.style("stroke", "#222");
 						}
 					});
-
-
-					// Size of radius
-					var rVal = 11;
 					//Add centroids to relevant countries for data representation
 					d3.json('centroids.json', function(error, coord) {
 						// console.log(countryObjects);
@@ -268,19 +234,16 @@
 							}
 							var cent = projection([longitude, lattitude]);
 							cInt = findInt(countryObjects, row.SHORT_NAME);
-
 							if(row.SHORT_NAME != "Korea North" &&
 								row.SHORT_NAME != "Korea South" &&
 								row.SHORT_NAME != "Laos" &&
 								row.SHORT_NAME != "Indonesia"){
-
 								mapg.append('circle')
 								.attr('cx', cent[0])
 								.attr('cy', cent[1])
-								.attr('r', cInt*rVal)
-								.style('opacity', .85)
+								.attr('r', cInt*11)
+								.style('opacity', .75)
 								.style('fill', cg(pct[row.SHORT_NAME]));
-
 								if(row.SHORT_NAME == "Vietnam, North"){
 									mapg.append('text')
 									.attr('x',cent[0])
@@ -288,7 +251,7 @@
 									.attr('class','circleComp_text')
 									.text("Vietnam");
 									// console.log(row.SHORT_NAME);
-									centroidObjects.push({Name: "Vietnam", Intensity: cInt*rVal, Delta: pct[row.SHORT_NAME], x: cent[0], y: cent[1]})
+									centroidObjects.push({Name: "Vietnam", Intensity: cInt*11, Delta: pct[row.SHORT_NAME], x: cent[0], y: cent[1]})
 								}
 								else if(row.SHORT_NAME == "Yemen, South"){
 									
@@ -298,7 +261,7 @@
 									.attr('class','circleComp_text')
 									.text("Yemen");
 									// console.log(row.SHORT_NAME);
-									centroidObjects.push({Name: "Yemen", Intensity: cInt*rVal, Delta: pct[row.SHORT_NAME], x: cent[0], y: cent[1]})
+									centroidObjects.push({Name: "Yemen", Intensity: cInt*11, Delta: pct[row.SHORT_NAME], x: cent[0], y: cent[1]})
 								}
 								else{
 									mapg.append('text')
@@ -307,9 +270,8 @@
 									.attr('class','circleComp_text')
 									.text(row.SHORT_NAME);
 									// console.log(row.SHORT_NAME);
-									centroidObjects.push({Name:row.SHORT_NAME , Intensity: cInt*rVal, Delta: pct[row.SHORT_NAME], x: cent[0], y: cent[1]})
+									centroidObjects.push({Name:row.SHORT_NAME , Intensity: cInt*11, Delta: pct[row.SHORT_NAME], x: cent[0], y: cent[1]})
 								}
-
 							}
 							
 						});
@@ -322,10 +284,8 @@
 							.attr('y', 75)
 							.attr('class','Title')
 							.text('Net GDP per Capita Comparison');
-
 						for(var i = 0; i<centroidObjects.length; i++){
 							xx += centroidObjects[i].Intensity;
-
 							//Plot Circle
 							circlesG.append("circle")
 								.attr('cx', xx)
@@ -340,14 +300,12 @@
 								.attr('y',230)
 								.attr('class','circleComp_text')
 								.text(centroidObjects[i].Name)
-
 							//Intensity 
 							circlesG.append("text")
 								.attr('x',xx)
 								.attr('y',260)
 								.attr('class','circleComp_text')
 								.text(d3.format('.2f')(Math.pow(centroidObjects[i].Intensity/11,2)));
-
 							//Plot GDP Data
 							circlesG.append("text")
 								.attr('x',xx)
@@ -373,19 +331,18 @@
 								.attr('y',260)
 								.attr('class','circleComp_text')
 								.text("Intensity");
-
+						// circlesG.append('g')
+						// 		.attr('id', '')
 						circlesG.append("text")
 								.attr('x',90)
 								.attr('y',370)
 								.attr('class','circleScaleText')
 								.text("-30% Loss");
-
 						circlesG.append("text")
 							.attr('x',mapWidth/2)
 							.attr('y',370)
 							.attr('class','circleScaleText')
 							.text("0");
-
 						circlesG.append("text")
 							.attr('x',895)
 							.attr('y',370)
@@ -393,7 +350,6 @@
 							.text("30% Gain");
 
 					});
-
 					mapg.append('rect')
 						.attr('x', 0)
 						.attr('width', mapWidth)
@@ -409,14 +365,13 @@
 						.attr('id','lGraph_Title')
 						.attr('fill', 'white')
 						.text("Change in GDP per Capita and Civil War Intensity");
-
 					// Key Distance axis
-					var key = d3.select("#mapLegend").append("svg").attr("width", '100%')
+					var key = d3.select("#mapLegendBox").append("svg").attr("width", '100%')
 						.attr("height","25");
 					var start = 30;
 					var nScale = d3.scale.sqrt()
 						.domain([0, 8])
-						.range([start, start + Math.sqrt(8) * 2 * rVal]);
+						.range([start, start + Math.sqrt(8) * 22]);
 					var nAxis = d3.svg.axis()
 						.scale(nScale)
 						.orient("bottom")
@@ -426,7 +381,6 @@
 						.call(nAxis);
 				});
 			});
-
 			function findIntensity(arr, id){
 				for(var i=0; i < arr.length; i++){
 					if ( arr[i].Code == id)
@@ -434,7 +388,6 @@
 				}
 				return -1;
 			}
-
 			function findInt(arr, name) {
 				for (var i=0; i < arr.length; i++) {
 					if (arr[i].Name == name) {
@@ -443,7 +396,6 @@
 				}
 				return -1;
 			}
-
    			function drawDemLines(intensity){
 	   			gdpCoords = [];
 	   			//Loop over countries gdp/years to get all the coordinates
@@ -460,13 +412,10 @@
 						.attr("fill", "none")
 						.attr("class",country.Name);
 	   			});
-
 	   			//Text positions for country labels
 	   			xText = [1966,1979,1980.5,1979,1986.5, 1985.5,1992.25,1993,2001,1975,1966.75];
 	   			yText = [230,320,1400,2500,480,100,800,320,300, 120,50];
-
 	   			countries = ["Thailand","Afghanistan","Syria","Iran","Sri Lanka","Yemen","Georgia","Tajikistan","Nepal","Cambodia","Vietnam",]
-
 	   			//Apply labels
 	   			for(var i = 0; i<xText.length; i++){
 	   				svg.append("text")
@@ -475,10 +424,8 @@
 	   				.attr("class","lineGraph_countries")
 	   				.text(countries[i])
 	   			}
-
 			};
 			
 		</script>
 	</body>
 </html>
-

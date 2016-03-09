@@ -69,18 +69,18 @@ p{
 	height: 100px;
 }
 #lineLegendBox{
-	/*top: 262px;
-    left: 903px;*/
+	top: 262px;
+    left: 763px;
 
-    top: 45%;
-    left: 60%;
+    /*top: 45%;
+    left: 60%;*/
 }
 #mapLegendBox{
-	/*top: 890px;
-    left: 916px;*/
+	top: 890px;
+    left: 736px;
 
-    top: 160%;
-    left: 59%;
+  /*  top: 160%;
+    left: 59%;*/
     width: 340px;
     height: 130px;
 }
@@ -141,10 +141,10 @@ p{
 	position: absolute;
 	width: 850px;
 	height: 25px;
-	/*top: 1738;
-	left: 390;*/
-	top: 322.5%;
-	left: 19%;
+	top: 1738;
+	left: 220;
+/*	top: 322.5%;
+	left: 19%;*/
 	margin: 0;
 }
 .circleComp_text, .circleScaleText{
